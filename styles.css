@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e3f2fd; /* Ou outra das opções acima */
+}
+
+
+.cabecalho {
+    background-color:white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid #ccc;
+}
+
+
+/* Estilo da Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Estilo do Menu */
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #f39c10;
+}
+
+main {
+    /*margin-top: 0;*/
+    text-align: center;
+    
+}
+
+/* Barra de Pesquisa */
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+}
+
+.barra-pesquisa input {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 5px;
+    width: 180px;
+    font-size: 14px;
+}
+
+.barra-pesquisa .botao-pesquisa {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.barra-pesquisa .botao-pesquisa img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Ícone do Carrinho 
+.carrinho img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}*/
+
+.banner {
+    background-color: #f39c10;
+    height: 700px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+ 
+}
+
+.banner-text{
+    padding: 0 100px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    flex: 1;
+    text-align: left;
+}
+
+.banner-image img{
+    height: 500px;
+    margin-top: 60px;
+    padding-right: 100px;
+    width: auto;
+}
+
+
+.oferta-do-dia {
+    text-align: center;
+    padding: 20px;
+    background: #f0c003;
+    border-radius: 10px;
+    margin: 100px auto;
+    max-width: 600px;
+
+}
+
+.combo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.combo img {
+    width: 120px;
+    border-radius: 10px;
+}
+
+.combo-info {
+    text-align: left;
+}
+
+.preco {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #c00;
+}
+
+/*.botoes button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}*/
+
+
+.itens {
+    text-align: center;
+    margin: 50px 0 20px; 
+}
+
+.itens h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px; /* Espaçamento inferior */
+    
+}
+
+.linha-separadora {
+    width: 90%;
+    height: 2px;
+    background-color: #f39c12; /* Cor laranja */
+    margin: 0 auto 20px; /* Centraliza e adiciona margem inferior */
+    border-radius: 2px;
+}
+
+
+
+.grid {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /*flex-wrap: wrap;*/
+    margin: 0 auto; /* Garante que a grid ocupe o centro do espaço disponível */
+    max-width: 1000px;
+    
+}
+
+.card {
+    font-size: 12px;
+    width: 250px;
+    height: 300px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card .preco {
+    font-size: 15px;
+    font-weight: bold;
+    color: #e67e22;
+    display: block;
+    margin: 10px 0;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilização do botão do carrinho */
+.carrinho-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.carrinho-btn img {
+    width: 30px; /* Ajuste do tamanho do ícone */
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.carrinho-btn:hover img {
+    transform: scale(1.1);
+}
+
+/* Estilização do botão "Comprar Agora" */
+.comprar-agora {
+    background-color: #f0c003; /* Cor verde para destacar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.comprar-agora:hover {
+    background-color: #218838;
+}
+
+
+
+
+/* Ajuste de layout responsivo */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        margin: 10px 0;
+    }
+
+    .barra-pesquisa {
+        margin-top: 10px;
+    }
+
+    .carrinho {
+        margin-top: 10px;
+    }
+}

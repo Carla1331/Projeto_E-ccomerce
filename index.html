@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria Artesanal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Hamburgueria">
+            <h1>Hamburgueria Artesanal</h1>
+        </div>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Cardápio</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Barra de Pesquisa -->
+        <div class="barra-pesquisa">
+            <input type="text" placeholder="Pesquisar">
+            <button class="botao-pesquisa">
+                <img src="img/lupa.png" alt="Pesquisar">
+            </button>
+        </div>
+    
+        <!-- Ícone do Carrinho -->
+        <div class="carrinho">
+            <img src="img/carrinho.png" alt="Carrinho de Compras">
+        </div>
+    </header>
+
+
+
+    <main>
+        <section class="banner">
+            <div class="banner-text">
+                <h2>O melhor hambúrguer artesanal da cidade!</h2>
+            </div>
+            <div class="banner-image">
+                <img src="img/hamburguer.png" alt="hamburguer Artesanal">
+            </div> 
+
+        </section>
+    
+
+    <section class="oferta-do-dia">
+        <h2>Oferta do Dia</h2>
+        <div class="combo">
+            <img src="combo.jpg" alt="Combo do Dia">
+            <div class="combo-info">
+                <h3>Combo Smash + Refri</h3>
+                <p>Hambúrguer artesanal + batata + refrigerante.</p>
+                <span class="preco">R$ 29,90</span>
+                <div class="botoes">
+                    <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                    <button class="comprar-agora">Comprar Agora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="itens">
+        <h2>Nosso Cardápio</h2>
+        <div class="linha-separadora"></div>
+        <div class="grid" id="menu-hamburgueres"></div>
+    </section>
+    
+    <section class="itens">
+        <h2>Duplos</h2>
+        <div class="linha-separadora"></div>
+        <div class="grid" id="menu-duplos"></div>
+    </section>
+    
+    <section class="itens">
+        <h2>Bebidas</h2>
+        <div class="linha-separadora"></div>
+        <div class="grid" id="menu-bebidas"></div>
+    </section>
+    
+    
+    
+    
+    
+</main>
+
+
+</body>
+
+<!-- Inclua seu script no final do body -->
+<script src="script.js"></script>
+
+</html>
