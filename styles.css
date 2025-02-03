@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: rgb(119, 136, 153); /* Ou outra das opções acima */
+    background-color: rgb(183, 195, 209); /* Ou outra das opções acima */
 }
 .menu li a.active {
     font-weight: bold;
@@ -106,7 +106,7 @@ main {
 }
 
 .banner {
-    background-color: rgb(205, 133, 63);
+    background-color: rgb(255, 222, 173);
     height: 735px;
     width: 100vw;
     display: flex;
@@ -125,6 +125,8 @@ main {
     flex: 1;
     text-align: left;
     animation: fade 5s infinite; /* Adiciona a animação */
+    text-shadow: none;
+    
 }
 
 .banner-text h1 {
@@ -193,8 +195,8 @@ main {
 .cardapio {
     text-align: center;
     margin: 50px 0 20px; 
-    padding-top: 100px; /* Altura do cabeçalho */
-    margin-top: -100px; /* Compensa o padding */
+    padding-top: 100px; 
+    margin-top: -100px;
 }
 
 .cardapio h2 {
@@ -498,9 +500,9 @@ main {
 /* Ícones das redes sociais */
 .rodape .icones-sociais a {
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
     border-radius: 50%; /* Deixa os ícones circulares */
     transition: background 0.3s ease, transform 0.3s ease; /* Efeito de transição */
 }
