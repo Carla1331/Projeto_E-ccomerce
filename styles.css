@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: #d9b08c; /* Ou outra das opções acima */
+    background-color: rgb(119, 136, 153); /* Ou outra das opções acima */
 }
 .menu li a.active {
     font-weight: bold;
@@ -106,7 +106,7 @@ main {
 }
 
 .banner {
-    background-color: #f39c10;
+    background-color: rgb(205, 133, 63);
     height: 735px;
     width: 100vw;
     display: flex;
@@ -114,26 +114,46 @@ main {
     justify-content: space-between;
     position: relative;
     top: 0;
- 
 }
 
-.banner-text{
+.banner-text {
     padding: 0 100px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     color: white;
     font-weight: bold;
     font-size: 22px;
     flex: 1;
     text-align: left;
-    
+    animation: fade 5s infinite; /* Adiciona a animação */
 }
 
-.banner-image img{
+.banner-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.banner-text p {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+}
+
+.banner-image img {
     height: 500px;
     margin-top: 60px;
     padding-right: 100px;
     width: auto;
 }
+
+/* Animação para transição de frases */
+@keyframes fade {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
 
 
 .oferta-do-dia {
@@ -173,6 +193,8 @@ main {
 .cardapio {
     text-align: center;
     margin: 50px 0 20px; 
+    padding-top: 100px; /* Altura do cabeçalho */
+    margin-top: -100px; /* Compensa o padding */
 }
 
 .cardapio h2 {
@@ -186,7 +208,7 @@ main {
 
     width: 66%;
     height: 2px;
-    background-color: #f39c12; /* Cor laranja */
+    background-color: rgb(243, 156, 18); /* Cor laranja */
     margin: 0 auto 20px; /* Centraliza e adiciona margem inferior */
     border-radius: 2px;
 }
