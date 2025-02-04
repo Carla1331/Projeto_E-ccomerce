@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: rgb(183, 195, 209); /* Ou outra das opções acima */
+    background-color: rgb(184, 195, 209); /* Ou outra das opções acima */
 }
 .menu li a.active {
     font-weight: bold;
