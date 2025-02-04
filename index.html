@@ -40,38 +40,48 @@
     </header>
 
     <main>
-        <section class="banner" id="inicio">
-            <div class="banner-text">
-                <h2>O melhor hambúrguer artesanal da cidade!</h2>
-                <p>O asdlkjaiojrweujafnjk aefjnlkehouh afejfnreufpoe asjdfnaiofiorhio</p>
-              
+<section class="banner" id="inicio">
+    <div class="carousel">
+        <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/hamburguer.png" alt="Hambúrguer Artesanal 1">
+                <h1>O melhor hambúrguer artesanal da cidade!</h1>
+                <p>Experimente o sabor inigualável!</p>
             </div>
-            <div class="banner-image">
-                <img src="img/hamburguer.png" alt="hamburguer Artesanal">
-            </div> 
-
-        </section>
+            <div class="carousel-item">
+                <img src="img/Hamburguer-bacon.png" alt="Hambúrguer Artesanal 2">
+                <h1>Sabor e qualidade em cada mordida!</h1>
+                <p>Ingredientes frescos e selecionados para você.</p>
+            </div>
+            <div class="carousel-item">
+                <img src="img/hamburguer.png" alt="Hambúrguer Artesanal 3">
+                <h1>O hambúrguer perfeito para qualquer momento!</h1>
+                <p>Descubra o prazer de um verdadeiro artesanal.</p>
+            </div>
+        </div>
+        <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+    </div>
+</section>
     
 
-    <section class="oferta-do-dia">
-        <h2>Oferta do Dia</h2>
-        <div class="combo">
-            <img src="combo.jpg" alt="Combo do Dia">
-            <div class="combo-info">
+        <section class="oferta-do-dia">
+            <button class="abrir-popup" onclick="abrirPopup()">Aproveite as nossas ofertas do dia</button>
+            <div class="popup" id="popup" style="display: none;">
+                <h2>Oferta do Dia</h2>
+                <img src="./img/combo1.png" alt="Combo do Dia">
                 <h3>Combo Smash + Refri</h3>
                 <p>Hambúrguer artesanal + batata + refrigerante.</p>
                 <span class="preco">R$ 29,90</span>
-
                 <div class="botoes">
                     <button class="icone-btn">
                         <img src="img/carrinho.png" alt="Carrinho de Compras">
                     </button>
                     <button class="comprar-agora">Comprar Agora</button>
                 </div>
-
+                <button class="fechar" onclick="fecharPopup()">Fechar</button>
             </div>
-        </div>
-    </section>
+        </section>
     
 
     <section class="cardapio" id="cardapio">

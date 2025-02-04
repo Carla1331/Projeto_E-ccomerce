@@ -9,12 +9,51 @@ html {
 }
 
 body {
+<<<<<<< HEAD
+    background-color: rgb(176, 196, 222); /* Ou outra das opções acima */
+=======
     background-color:rgb(176, 196, 222); /* Ou outra das opções acima */
+>>>>>>> d42db865ee36653d9dea90edc505a5cd802accb5
 }
 .menu li a.active {
     font-weight: bold;
     color: #f0c003; /* Cor de destaque */
 }
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+}
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+}
+.carousel-item {
+    display: none;
+    width: 100%;
+}
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.carousel-item h1, .carousel-item p {
+    margin: 10px 0;
+    color: #333;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
 
 .cabecalho {
     
@@ -105,8 +144,13 @@ main {
     height: 16px;
 }
 
+<<<<<<< HEAD
+.carousel-item {
+    background-color: rgb(255, 222, 173);
+=======
 .banner {
     background-color:rgb(210, 105, 30);
+>>>>>>> d42db865ee36653d9dea90edc505a5cd802accb5
     height: 735px;
     width: 100vw;
     display: flex;
@@ -116,19 +160,30 @@ main {
     top: 0;
 }
 
-.banner-text{
+.carousel-item {
     padding: 0 100px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     color: white;
     font-weight: bold;
     font-size: 22px;
     flex: 1;
     text-align: left;
+    animation: fade 5s infinite; /* Adiciona a animação */
     text-shadow: none;
     
 }
 
-.banner-image img{
+.carousel-item h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.carousel-item p {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+}
+
+.carousel-item img {
     height: 500px;
     margin-top: 60px;
     padding-right: 100px;
@@ -136,14 +191,43 @@ main {
 }
 
 
-.oferta-do-dia {
+
+/* .oferta-do-dia {
     text-align: center;
     padding: 20px;
     background: #f0c003;
     border-radius: 10px;
     margin: 100px auto;
-    max-width: 600px;
+    max-width: 300px;
+} */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    display: none;
+    width: 300px;
+    text-align: center;
+}
+.popup img {
+    width: 50%;
+    border-radius: 8px;
+}
 
+.botoes button {
+    margin: 10px;
+}
+.fechar {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .combo {
@@ -172,7 +256,7 @@ main {
 
 .cardapio {
     text-align: center;
-    margin: 50px 0 20px;
+    margin: 50px 0 20px; 
     padding-top: 100px; 
     margin-top: -100px;
 }
@@ -188,7 +272,7 @@ main {
 
     width: 66%;
     height: 2px;
-    background-color: #f39c12; /* Cor laranja */
+    background-color: rgb(243, 156, 18); /* Cor laranja */
     margin: 0 auto 20px; /* Centraliza e adiciona margem inferior */
     border-radius: 2px;
 }
@@ -290,10 +374,31 @@ main {
     transition: background-color 0.3s;
     width: 100%; /* Ocupa toda a largura */
     margin-top: auto;
+    transition: transform 0.2s;
 }
+
+.abrir-popup {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: none;
+    background: #f0c003;
+    background-color: #f0c003;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 300px;
+    transition: background-color 0.3s;
+}
+
+.abrir-popup:hover {
+    background-color: #d49e00;
+    transform: scale(1.1);
+}
+
 
 .comprar-agora:hover {
     background-color: #d49e00;
+    transform: scale(1.1);
 }
 
 
