@@ -1,4 +1,5 @@
 // Listas de produtos
+// #################### HAMBURGUERES ######################### // 
 const hamburgueres = [
     {
         nome: "Hambúrguer Clássico",
@@ -28,6 +29,34 @@ const hamburgueres = [
         imagem: "img/hamburguer-veggie.png",
         tipo: "normal"
     },
+    {
+        nome: "Hambúrguer Supremo",
+        descricao: "Pão brioche, carne 200g, queijo suíço, cogumelos salteados e cebola caramelizada.",
+        preco: "R$ 36,90",
+        imagem: "img/hamburguer-supremo.png",
+        tipo: "normal"
+    },
+    // {
+    //     nome: "Frango Crocante",
+    //     descricao: "Pão brioche, filé de frango empanado crocante, queijo prato e maionese temperada.",
+    //     preco: "R$ 26,90",
+    //     imagem: "img/hamburguer-frango.png",
+    //     tipo: "normal"
+    // },
+    // {
+    //     nome: "Hambúrguer Supremo",
+    //     descricao: "Pão brioche, carne 200g, queijo suíço, cogumelos salteados e cebola caramelizada.",
+    //     preco: "R$ 36,90",
+    //     imagem: "img/hamburguer-supremo.png",
+    //     tipo: "normal"
+    // },
+    // {
+    //     nome: "Frango Crocante",
+    //     descricao: "Pão brioche, filé de frango empanado crocante, queijo prato e maionese temperada.",
+    //     preco: "R$ 26,90",
+    //     imagem: "img/hamburguer-frango.png",
+    //     tipo: "normal"
+    // },
     // {
     //     nome: "Hambúrguer Supremo",
     //     descricao: "Pão brioche, carne 200g, queijo suíço, cogumelos salteados e cebola caramelizada.",
@@ -69,9 +98,16 @@ const hamburgueres = [
         preco: "R$ 34,90",
         imagem: "img/hamburguer.png",
         tipo: "duplo"
-    }
+    },
+    {
+        nome: "Cheddar Duplo",
+        descricao: "Pão brioche, carne dupla 300g, cheddar extra, cebola crispy.",
+        preco: "R$ 34,90",
+        imagem: "img/hamburguer.png",
+        tipo: "duplo"
+    },
 ];
-
+// ##################### BEBIDAS ######################## // 
 const bebidas = [
     {
         nome: "Coca-Cola",
@@ -96,10 +132,18 @@ const bebidas = [
         descricao: "Laranja ou morango, 500ml.",
         preco: "R$ 8,90",
         imagem: "suco.jpg"
+    },
+    {
+        nome: "Suco Natural",
+        descricao: "Laranja ou morango, 500ml.",
+        preco: "R$ 8,90",
+        imagem: "suco.jpg"
     }
 ];
 
-// Função para criar os cards dinamicamente
+// ##################### FUNÇÃO PARA CRIAR CARDS ######################## // 
+
+// Função para carregar os produtos no slider
 function carregarProdutos(lista, containerId) {
     const container = document.getElementById(containerId);
     container.innerHTML = ""; // Limpa o conteúdo antes de adicionar novos itens
@@ -126,18 +170,77 @@ function carregarProdutos(lista, containerId) {
             <!-- Botão "Comprar Agora" centralizado -->
             <button class="comprar-agora">Comprar Agora</button>
         `;
-
         container.appendChild(card);
     });
 }
 
+// Variável para controlar o índice do slider
+let indiceSlider = 0;
+let indiceSliderduplos = 0;
+let indiceSliderbebidas = 0;
+const produtosPorPagina = 4;
+
+// Função para mover o slider
+function moverSlider(direcao) {
+    const slider = document.getElementById("menu-hamburgueres");
+    const totalProdutos = slider.children.length;
+
+    // Ajusta o índice de acordo com a direção
+    indiceSlider += direcao;
+
+    // Garante que a navegação seja cíclica (volta para o primeiro grupo quando chega no final)
+    if (indiceSlider < 0) {
+        indiceSlider = totalProdutos - produtosPorPagina; // Volta para o último grupo de 4 itens
+    } else if (indiceSlider + produtosPorPagina > totalProdutos) {
+        indiceSlider = 0; // Vai para o primeiro grupo de 4 itens
+    }
+
+    // Ajusta a posição do slider com base no índice
+    slider.style.transform = `translateX(-${indiceSlider * 270}px)`; // 270px = largura do card + margem (ajuste conforme necessário)
+}
+
+function moverSliderDuplos(direcaoduplos) {
+    const sliderduplos = document.getElementById("menu-duplos");
+    const totalProdutos = sliderduplos.children.length;
+
+    // Ajusta o índice de acordo com a direção
+    indiceSliderduplos += direcaoduplos;
+
+    // Garante que a navegação seja cíclica (volta para o primeiro grupo quando chega no final)
+    if (indiceSliderduplos < 0) {
+        indiceSliderduplos = totalProdutos - produtosPorPagina; // Volta para o último grupo de 4 itens
+    } else if (indiceSliderduplos + produtosPorPagina > totalProdutos) {
+        indiceSliderduplos = 0; // Vai para o primeiro grupo de 4 itens
+    }
+
+    // Ajusta a posição do slider com base no índice
+    sliderduplos.style.transform = `translateX(-${indiceSliderduplos * 270}px)`; // 270px = largura do card + margem (ajuste conforme necessário)
+}
+
+function moverSliderBebidas(direcaobebidas) {
+    const sliderbebidas = document.getElementById("menu-bebidas");
+    const totalProdutos = sliderbebidas.children.length;
+
+    // Ajusta o índice de acordo com a direção
+    indiceSliderbebidas += direcaobebidas;
+
+    // Garante que a navegação seja cíclica (volta para o primeiro grupo quando chega no final)
+    if (indiceSliderbebidas < 0) {
+        indiceSliderbebidas = totalProdutos - produtosPorPagina; // Volta para o último grupo de 4 itens
+    } else if (indiceSliderbebidas + produtosPorPagina > totalProdutos) {
+        indiceSliderbebidas = 0; // Vai para o primeiro grupo de 4 itens
+    }
+
+    // Ajusta a posição do slider com base no índice
+    sliderbebidas.style.transform = `translateX(-${indiceSliderbebidas * 270}px)`; // 270px = largura do card + margem (ajuste conforme necessário)
+}
+// #################### CARREGAR PRODUTOS AO INICIAR A PÁGINA ######################### // 
 // Carregar os produtos ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
     carregarProdutos(hamburgueres.filter(h => h.tipo === "normal"), "menu-hamburgueres");
     carregarProdutos(hamburgueres.filter(h => h.tipo === "duplo"), "menu-duplos");
     carregarProdutos(bebidas, "menu-bebidas");
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
@@ -162,45 +265,76 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+// ##################### POPUP ######################## // 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("popup").style.display = "block";
 });
-function fecharPopup() {
-    document.getElementById("popup").style.display = "none";
-}
+
+// Bloquear a rolagem ao carregar a página
+window.onload = function() {
+    document.body.classList.add('popup-aberto');
+    document.documentElement.classList.add('popup-aberto');
+  }
+  
+  function abrirPopup() {
+    // Exibe o popup
+    document.getElementById('popup').style.display = 'block';
+    
+    // Bloqueia a rolagem da página adicionando a classe 'popup-aberto' ao body e html
+    document.body.classList.add('popup-aberto');
+    document.documentElement.classList.add('popup-aberto');
+  }
+  
+  function fecharPopup() {
+    // Oculta o popup
+    document.getElementById('popup').style.display = 'none';
+    
+    // Libera a rolagem da página removendo a classe 'popup-aberto'
+    document.body.classList.remove('popup-aberto');
+    document.documentElement.classList.remove('popup-aberto');
+  }
 
 
-function abrirPopup() {
-    document.getElementById("popup").style.display = "block";
-}
+// ################## SLIDER ########################### // 
 
-function fecharPopup() {
-    document.getElementById("popup").style.display = "none";
-}
-
-let indiceSlide = 0; // Certifique-se de que a variável está declarada corretamente
+let indiceSlide = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
     mostrarSlide(indiceSlide);
+    setInterval(() => mudarSlide(1), 10000); // Troca de slide a cada 4 segundos
 });
 
 function mudarSlide(n) {
+    let slides = document.getElementsByClassName("carousel-item");
+
+    slides[indiceSlide].classList.remove("fade-in");
+    slides[indiceSlide].classList.add("fade-out");
+
     indiceSlide += n;
-    mostrarSlide(indiceSlide);
+
+    if (indiceSlide >= slides.length) {
+        indiceSlide = 0;
+    } else if (indiceSlide < 0) {
+        indiceSlide = slides.length - 1;
+    }
+
+    setTimeout(() => {
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            slides[i].classList.remove("fade-in", "fade-out");
+        }
+        slides[indiceSlide].style.display = "block";
+        slides[indiceSlide].classList.add("fade-in");
+    }, 500); // Tempo da animação (0.5s)
 }
 
 function mostrarSlide(n) {
     let slides = document.getElementsByClassName("carousel-item");
-
-    if (n >= slides.length) { 
-        indiceSlide = 0; 
-    } else if (n < 0) { 
-        indiceSlide = slides.length - 1; 
-    }
-
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+        slides[i].classList.remove("fade-in", "fade-out");
     }
-    
-    slides[indiceSlide].style.display = "block";
+    slides[n].style.display = "block";
+    slides[n].classList.add("fade-in");
 }

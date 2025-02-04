@@ -1,9 +1,5 @@
-.logo h1 {
-    font-family: 'Lobster', cursive;
-    font-size: 22px; /* Ajuste conforme necessário */
-    color: black; /* Cor amarela para destacar */
-}
 
+/* ############################ GERAL #################################### */
 *{
     margin: 0;
     padding: 0;
@@ -15,12 +11,78 @@ html {
 }
 
 body {
-    background-color: rgb(183, 195, 209); /* Ou outra das opções acima */
+    background-image: url(../img/bg.png) ;
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed; /* Faz com que a imagem fique fixa ao rolar a página */
 }
+
+/* ############################### LOGO ################################# */
+
+.logo h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 22px; 
+    color: black; 
+}
+
+.logo {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-rodape h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 22px; 
+    color: rgb(255, 255, 255); 
+}
+
+/* ############################### MENU ################################# */
 .menu li a.active {
     font-weight: bold;
     color: #f0c003; /* Cor de destaque */
 }
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu-icon i {
+    font-size: 24px; /* Tamanho do ícone */
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-icon i:hover {
+    color: #e44d26; /* Cor ao passar o mouse */
+    transform: scale(1.2);
+}
+
+.barra-pesquisa .botao-pesquisa i,
+.card-icons .icone-btn i {
+    font-size: 20px;
+    color: #333;
+    transition: transform 0.2s ease;
+}
+
+.card-icons .icone-btn i:hover {
+    transform: scale(1.1);
+    color: #e44d26;
+}
+
+/* ############################### BANNER/CARROSSEL ################################# */
 
 .carousel {
     position: relative;
@@ -32,8 +94,25 @@ body {
     overflow: hidden;
 }
 .carousel-item {
-    display: none;
-    width: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    background-color: #ffdead;
+    height: 735px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+}
+
+
+.carousel-item.fade-in {
+    opacity: 1;
+}
+
+.carousel-item.fade-out {
+    opacity: 0;
 }
 .carousel-item img {
     width: 100%;
@@ -58,9 +137,29 @@ body {
 .next { right: 10px; }
 
 
+.carousel-item h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.carousel-item p {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+}
+
+.carousel-item img {
+    height: 500px;
+    margin-top: 60px;
+    padding-right: 100px;
+    width: auto;
+}
+
+/* ############################### CABEÇALHO ################################# */
+
 .cabecalho {
-    background-color: white;
+    background-color: #ffffff;
     color: black;
+    box-shadow: #000000;
     display: flex;
     justify-content: center; /* Centraliza os itens horizontalmente */
     align-items: center; /* Alinha os itens verticalmente */
@@ -82,46 +181,8 @@ body {
     gap: 10px;
 }
 
-/* Estilo da Logo */
-.logo {
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-}
 
-.logo img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-}
-
-/* Estilo do Menu */
-.menu {
-    list-style: none;
-    display: flex;
-}
-
-.menu li {
-    margin: 0 15px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.menu a:hover {
-    color: #f39c10;
-}
-
-main {
-    /*margin-top: 0;*/
-    text-align: center;
-    
-}
-
+/* ############################### BARRA DE PESQUISA ################################# */
 /* Barra de Pesquisa */
 .barra-pesquisa {
     display: flex;
@@ -153,48 +214,9 @@ main {
     height: 16px;
 }
 
-.carousel-item {
-    background-color: rgb(255, 222, 173);
-    height: 735px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    top: 0;
-}
-
-.carousel-item {
-    padding: 0 100px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
-    flex: 1;
-    text-align: left;
-    animation: fade 5s infinite; /* Adiciona a animação */
-    text-shadow: none;
-    
-}
-
-.carousel-item h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.carousel-item p {
-    font-size: 1.5rem;
-    margin: 10px 0 0;
-}
-
-.carousel-item img {
-    height: 500px;
-    margin-top: 60px;
-    padding-right: 100px;
-    width: auto;
-}
 
 
+/* ############################### POPUP OFERTA DO DIA ################################# */
 
 /* .oferta-do-dia {
     text-align: center;
@@ -204,6 +226,12 @@ main {
     margin: 100px auto;
     max-width: 300px;
 } */
+
+main {
+    /*margin-top: 0;*/
+    text-align: center;
+    
+}
 .popup {
     position: fixed;
     top: 50%;
@@ -216,7 +244,22 @@ main {
     display: none;
     width: 300px;
     text-align: center;
+    display: none;
+    z-index: 9999; /* Garantir que fique sobre o conteúdo */
 }
+
+/* Bloquear a rolagem da página quando o popup estiver visível */
+body.popup-aberto {
+    overflow: hidden; /* Desabilitar rolagem */
+    height: 100%; /* Garantir que o body ocupe a altura total */
+  }
+  
+  /* Certificar-se de que a rolagem não é permitida em html também */
+html.popup-aberto {
+    overflow: hidden;
+    height: 100%; /* Garantir que o HTML também ocupe a altura total */
+  }
+
 .popup img {
     width: 50%;
     border-radius: 8px;
@@ -226,12 +269,17 @@ main {
     margin: 10px;
 }
 .fechar {
-    background: red;
+    background: #ff0000;
     color: white;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.fechar:hover {
+    transform: scale(1.1);
+    background-color: #ff0000;
 }
 
 .combo {
@@ -256,7 +304,7 @@ main {
     color: #c00;
 }
 
-
+/* ############################### CARDAPIO ################################# */
 
 .cardapio {
     text-align: center;
@@ -267,7 +315,7 @@ main {
 
 .cardapio h2 {
     font-size: 1.2rem;
-    color: #333;
+    color: #fffefe;
     margin-bottom: 10px; /* Espaçamento inferior */
     
 }
@@ -282,17 +330,72 @@ main {
 }
 
 
-
-.grid {
-    padding-top: 5px;
+/* Contêiner do slider */
+.slider-container {
+    position: relative;
+    width: 100%; /* O slider vai ocupar 100% da largura da tela */
+    overflow: hidden; /* Esconde os produtos que ficam fora da área visível */
+    margin: 0 auto; /* Garante que o slider ocupe o centro do espaço disponível */
     display: flex;
     justify-content: center;
-    gap: 15px;
-    /*flex-wrap: wrap;*/
-    margin: 0 auto; /* Garante que a grid ocupe o centro do espaço disponível */
-    max-width: 1000px;
-    
 }
+/* Contêiner do slider */
+.slider-container-duplos {
+    position: relative;
+    width: 100%; /* O slider vai ocupar 100% da largura da tela */
+    overflow: hidden; /* Esconde os produtos que ficam fora da área visível */
+    margin: 0 auto; /* Garante que o slider ocupe o centro do espaço disponível */
+    display: flex;
+    justify-content: center;
+}
+/* Contêiner do slider */
+.slider-container-bebidas {
+    position: relative;
+    width: 100%; /* O slider vai ocupar 100% da largura da tela */
+    overflow: hidden; /* Esconde os produtos que ficam fora da área visível */
+    margin: 0 auto; /* Garante que o slider ocupe o centro do espaço disponível */
+    display: flex;
+    justify-content: center;
+}
+
+/* Grid dos produtos (com flexbox para mostrar os cards em linha) */
+.grid {
+    display: flex;
+    transition: transform 0.5s ease; /* Transição suave quando os produtos se moverem */
+    gap: 15px; /* Espaço entre os cards */
+}
+
+/* Estilo de cada card */
+.card {
+    min-width: 220px; /* Largura mínima de cada card (ajustado para 4 produtos visíveis) */
+    flex-shrink: 0; /* Evita que os cards encolham */
+    text-align: center;
+    box-sizing: border-box; /* Garante que o padding/margem não afete a largura */
+}
+
+/* Botões de navegação */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slider-btn.prev {
+    left: 10px;
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
+/* ############################### CARDS ################################# */
 
 /* Estilização geral dos cards */
 .card {
@@ -365,7 +468,7 @@ main {
     transform: scale(1.1);
 }
 
-
+/* ############################### BTN COMPRAR AGORA POPUP ################################# */
 /* Estilização do botão "Comprar Agora" */
 .comprar-agora {
     background-color: #f0c003;
@@ -376,7 +479,7 @@ main {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
-    width: 100%; /* Ocupa toda a largura */
+    width: 80%; /* Ocupa toda a largura */
     margin-top: auto;
     transition: transform 0.2s;
 }
@@ -405,6 +508,7 @@ main {
     transform: scale(1.1);
 }
 
+/* ############################### SOBRE NOS ################################# */
 
 .sobre-nos {
     display: flex;
@@ -475,14 +579,16 @@ main {
     line-height: 1.6;
 }
 
+/* ############################### CONTATO ################################# */
+
 .contato {
     padding: 300px 2% 80px 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90vw; /* Ocupa 90% da largura da tela */
-    
-
+    width: 100%; /* Ocupa 90% da largura da tela */
+    background-color: #cccccc8e;
+    border-radius: 30px;
 }
 .titulo-contato {
     font-size: 24px;
@@ -557,6 +663,7 @@ main {
     border-radius: 5px;
     transition: background 0.3s;
     align-self: flex-start;
+    margin-top: 10px; /* Ajuste o valor para aumentar a distância */
 }
 
 .formulario-contato button:hover {
@@ -564,7 +671,7 @@ main {
 }
 
 
-
+/* ############################### FOOTER ################################# */
 /* Rodapé */
 .rodape {
     background-color: rgba(0, 0, 0, 0.6); /* Cor semitransparente */
@@ -620,7 +727,7 @@ main {
 }
 
 
-
+/* ############################### RESPONSIVIDADE ################################# */
 
 /* Responsivo */
 @media (max-width: 768px) {

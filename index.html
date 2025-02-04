@@ -1,182 +1,224 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburgueria Artesanal</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburgueria Artesanal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
+
 <body>
+  <header class="cabecalho">
+    <div class="Logo">
+      <div class="logo">
+        <img src="img/logoHamburguer.png" alt="BurguerCraft">
 
-    <header class="cabecalho">
-        <div class="Logo">
-            <div class="logo">
-                <img src="img/logoHamburguer.png" alt="BurguerCraft">
-                <h1>BurguerCraft</h1>
-            </div>
-        </div>
-        
-        <nav>
-            <ul class="menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    
-        <!-- Barra de Pesquisa -->
-        <div class="barra-pesquisa">
-            <input type="text" placeholder="Pesquisar">
-            <button class="botao-pesquisa">
-                <img src="img/pesquisar.png" alt="Pesquisar">
-            </button>
-        </div>
-    
-        <!-- Ícones do Carrinho e do Perfil -->
-        <div class="card-icons">
-            <button class="icone-btn">
-                <img src="img/carrinho.png" alt="Carrinho de Compras">
-            </button>
-            <button class="icone-btn">
-                <img src="img/perfil.png" alt="Perfil">
-            </button>
-        </div>
-    </header>
-    
+        <h1>BurguerCraft</h1>
+      </div>
+    </div>
 
-    <main>
-<section class="banner" id="inicio">
-    <div class="carousel">
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="#inicio" class="menu-icon" title="Início">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#cardapio" class="menu-icon" title="Cardápio">
+            <i class="fas fa-utensils"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#sobre" class="menu-icon" title="Sobre">
+            <i class="fas fa-info-circle"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#contato" class="menu-icon" title="Contato">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Barra de Pesquisa -->
+    <div class="barra-pesquisa">
+      <input type="text" placeholder="Pesquisar">
+      <button class="botao-pesquisa">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+
+    <!-- Ícones do Carrinho e do Perfil -->
+    <div class="card-icons">
+      <button class="icone-btn">
+        <i class="fas fa-shopping-cart"></i>
+      </button>
+      <button class="icone-btn">
+        <i class="fas fa-user"></i>
+      </button>
+    </div>
+  </header>
+
+
+
+  <main>
+    <section class="banner" id="inicio">
+      <div class="carousel">
         <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/hamburguer.png" alt="Hambúrguer Artesanal 1">
-                <h1>O melhor hambúrguer artesanal da cidade!</h1>
-                <p>Experimente o sabor inigualável!</p>
-            </div>
-            <div class="carousel-item">
-                <img src="img/Hamburguer-bacon.png" alt="Hambúrguer Artesanal 2">
-                <h1>Sabor e qualidade em cada mordida!</h1>
-                <p>Ingredientes frescos e selecionados para você.</p>
-            </div>
-            <div class="carousel-item">
-                <img src="img/hamburguer.png" alt="Hambúrguer Artesanal 3">
-                <h1>O hambúrguer perfeito para qualquer momento!</h1>
-                <p>Descubra o prazer de um verdadeiro artesanal.</p>
-            </div>
+          <div class="carousel-item active">
+            <img src="img/hamburguer.png" alt="Hambúrguer Artesanal 1">
+            <h1>O melhor hambúrguer artesanal da cidade!</h1>
+            <p>Experimente o sabor inigualável!</p>
+          </div>
+          <div class="carousel-item">
+            <img src="img/Hamburguer-bacon.png" alt="Hambúrguer Artesanal 2">
+            <h1>Sabor e qualidade em cada mordida!</h1>
+            <p>Ingredientes frescos e selecionados para você.</p>
+          </div>
+          <div class="carousel-item">
+            <img src="img/hamburguer.png" alt="Hambúrguer Artesanal 3">
+            <h1>O hambúrguer perfeito para qualquer momento!</h1>
+            <p>Descubra o prazer de um verdadeiro artesanal.</p>
+          </div>
         </div>
         <button class="next" onclick="mudarSlide(1)">&#10095;</button>
-    </div>
-</section>
+      </div>
+    </section>
+
+
+    <section class="oferta-do-dia">
+      <button class="abrir-popup" onclick="abrirPopup()">Aproveite as nossas ofertas do dia</button>
+      <div class="popup" id="popup" style="display: none;">
+        <h2>Oferta do Dia</h2>
+        <img src="./img/combo1.png" alt="Combo do Dia">
+        <h3>Combo Smash + Refri</h3>
+        <p>Hambúrguer artesanal + batata + refrigerante.</p>
+        <span class="preco">R$ 29,90</span>
+        <div class="botoes">
+          <button class="icone-btn">
+            <img src="img/carrinho.png" alt="Carrinho de Compras">
+          </button>
+          <button class="comprar-agora">Comprar Agora</button>
+        </div>
+        <button class="fechar" onclick="fecharPopup()">Fechar</button>
+      </div>
+    </section>
     
 
-        <section class="oferta-do-dia">
-            <button class="abrir-popup" onclick="abrirPopup()">Aproveite as nossas ofertas do dia</button>
-            <div class="popup" id="popup" style="display: none;">
-                <h2>Oferta do Dia</h2>
-                <img src="./img/combo1.png" alt="Combo do Dia">
-                <h3>Combo Smash + Refri</h3>
-                <p>Hambúrguer artesanal + batata + refrigerante.</p>
-                <span class="preco">R$ 29,90</span>
-                <div class="botoes">
-                    <button class="icone-btn">
-                        <img src="img/carrinho.png" alt="Carrinho de Compras">
-                    </button>
-                    <button class="comprar-agora">Comprar Agora</button>
-                </div>
-                <button class="fechar" onclick="fecharPopup()">Fechar</button>
-            </div>
-        </section>
-    
 
     <section class="cardapio" id="cardapio">
-        <h2>Nosso Cardápio</h2>
-        <div class="linha-separadora"></div>
+      <h2>Nosso Cardápio</h2>
+      <div class="linha-separadora"></div>
+      <div class="slider-container" id="slider-container">
+        <button class="slider-btn prev" onclick="moverSlider(-1)">&#10094;</button>
         <div class="grid" id="menu-hamburgueres"></div>
-    </section>
+        <button class="slider-btn next" onclick="moverSlider(1)">&#10095;</button>
+    </div>
     
+    </section>
+
     <section class="cardapio">
-        <h2>Duplos</h2>
-        <div class="linha-separadora"></div>
+      <h2>Duplos</h2>
+      <div class="linha-separadora"></div>
+      <div class="slider-container-duplos" id="slider-container-duplos">
+        <button class="slider-btn prev" onclick="moverSliderDuplos(-1)">&#10094;</button>
         <div class="grid" id="menu-duplos"></div>
+        <button class="slider-btn next" onclick="moverSliderDuplos(1)">&#10095;</button>
     </section>
-    
+
     <section class="cardapio">
-        <h2>Bebidas</h2>
-        <div class="linha-separadora"></div>
+      <h2>Bebidas</h2>
+      <div class="linha-separadora"></div>
+      <div class="slider-container-bebidas" id="slider-container-bebidas">
+        <button class="slider-btn prev" onclick="moverSliderBebidas(-1)">&#10094;</button>
         <div class="grid" id="menu-bebidas"></div>
+        <button class="slider-btn next" onclick="moverSliderBebidas(1)">&#10095;</button>
     </section>
 
     <div class="sobre-nos" id="sobre">
-        <div class="sobre-nos-container">
-            <div class="sobre-nos-banner">
-                <img src="img/sobreNos.avif" alt="Imagem do Banner">
-                <div class="content">
-                    <h2>Sobre nós</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi.
-                    </p>
-                </div>
-            </div>
+      <div class="sobre-nos-container">
+        <div class="sobre-nos-banner">
+          <img src="img/sobreNos.avif" alt="Imagem do Banner">
+          <div class="content">
+            <h2>Sobre nós</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor
+              dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci
+              ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum
+              mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis.
+              Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque,
+              nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
     <section id="contato" class="contato">
-        <h2 class="titulo-contato">Entre em Contato</h2>
-        <div class="container-contato">
-            <!-- Lado Esquerdo - Informações -->
-            <div class="contato-info">
-                <p><strong>📍 Rua dos Hambúrgueres, 123 - Cidade</strong></p>
-                <p><strong>📞 (11) 99999-9999</strong> </p>
-                <p><strong>🕒 Terça a sexta - 18h às 22h</strong></p>
-                <p><strong>🕒 Sábado e domingo - 18h às 23h</strong></p>
-                <p><strong>🕒 Segunda - Fechado</strong></p>
-                <p><strong>📧 contato@hamburgueria.com</strong></p>
-            </div>
-           
-    
-            <!-- Lado Direito - Formulário -->
-            <form class="formulario-contato">
-                <div class="formulario-campos">
-                    <input type="text" placeholder="Nome" required>
-                    <input type="email" placeholder="E-mail" required>
-                    <textarea placeholder="Digite sua mensagem..." required></textarea>
-                </div>
-                <button type="submit">Enviar Mensagem</button>
-            </form>
-        </div>
-    </section>
-    
-    <footer class="rodape">
-        <div class="logo-rodape">
-            <img src="img/logo.png" alt="Logo Hamburgueria Artesanal">
+      <h2 class="titulo-contato">Entre em Contato</h2>
+      <div class="container-contato">
+        <!-- Lado Esquerdo - Informações -->
+        <div class="contato-info">
+          <p><strong>📍 Rua dos Hambúrgueres, 123 - Cidade</strong></p>
+          <p><strong>📞 (11) 99999-9999</strong> </p>
+          <p><strong>🕒 Terça a sexta - 18h às 22h</strong></p>
+          <p><strong>🕒 Sábado e domingo - 18h às 23h</strong></p>
+          <p><strong>🕒 Segunda - Fechado</strong></p>
+          <p><strong>📧 contato@hamburgueria.com</strong></p>
         </div>
 
-        <div class="icones-sociais">
-            <!-- Links das redes sociais -->
-            <a href="https://instagram.com" target="_blank">
-                <img src="img/instagram.png" alt="Instagram">
-            </a>
-            <a href="https://facebook.com" target="_blank">
-                <img src="img/icons8-facebook-novo-50.png" alt="Facebook">
-            </a>
-            <a href="https://wa.me/seunumerodetelefone" target="_blank">
-                <img src="img/icons8-whatsapp-50.png" alt="WhatsApp">
-            </a>
+
+        <!-- Lado Direito - Formulário -->
+        <form class="formulario-contato">
+          <div class="formulario-campos">
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="E-mail" required>
+            <textarea placeholder="Digite sua mensagem..." required></textarea>
+          </div>
+          <button type="submit">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="rodape">
+      <div class="Logo">
+        <div class="logo-rodape">
+          <img src="img/logoHamburguer.png" alt="BurguerCraft">
+  
+          <h1>BurguerCraft</h1>
         </div>
-    
-        <p class="direitos"><small>© 2024 Hamburgueria Artesanal. <br> Todos os direitos reservados.</small></p>
-    
-        
+      </div>
+
+      <div class="icones-sociais">
+        <!-- Links das redes sociais -->
+        <a href="https://instagram.com" target="_blank">
+          <img src="img/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://facebook.com" target="_blank">
+          <img src="img/icons8-facebook-novo-50.png" alt="Facebook">
+        </a>
+        <a href="https://wa.me/seunumerodetelefone" target="_blank">
+          <img src="img/icons8-whatsapp-50.png" alt="WhatsApp">
+        </a>
+      </div>
+
+      <p class="direitos"><small>© 2024 Hamburgueria Artesanal. <br> Todos os direitos reservados.</small></p>
+
+
     </footer>
-    
-    
-    
-    
-    
-    
-    
-</main>
+
+
+
+
+
+
+
+  </main>
 
 
 </body>
