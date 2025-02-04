@@ -432,7 +432,7 @@ html.popup-aberto {
 .grid {
     display: flex;
     transition: transform 0.5s ease;
-    gap: 15px;
+    gap: 5px;
 }
 
 .slider-btn {
