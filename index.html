@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamburgueria Artesanal</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="cabecalho">
         <div class="Logo">
             <div class="logo">
-                <img src="img/logo.png" alt="BurguerCraft">
+                <img src="img/logoHamburguer.png" alt="BurguerCraft">
                 <h1>BurguerCraft</h1>
             </div>
         </div>
@@ -24,7 +25,7 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-
+    
         <!-- Barra de Pesquisa -->
         <div class="barra-pesquisa">
             <input type="text" placeholder="Pesquisar">
@@ -33,11 +34,17 @@
             </button>
         </div>
     
-        <!-- Ícone do Carrinho -->
-        <div class="carrinho-btn">
-            <img src="img/carrinho.png" alt="Carrinho de Compras">
+        <!-- Ícones do Carrinho e do Perfil -->
+        <div class="card-icons">
+            <button class="icone-btn">
+                <img src="img/carrinho.png" alt="Carrinho de Compras">
+            </button>
+            <button class="icone-btn">
+                <img src="img/perfil.png" alt="Perfil">
+            </button>
         </div>
     </header>
+    
 
     <main>
 <section class="banner" id="inicio">
@@ -126,6 +133,7 @@
                 <p><strong>🕒 Segunda - Fechado</strong></p>
                 <p><strong>📧 contato@hamburgueria.com</strong></p>
             </div>
+           
     
             <!-- Lado Direito - Formulário -->
             <form class="formulario-contato">
@@ -157,7 +165,7 @@
             </a>
         </div>
     
-        <p class="direitos">© 2024 Hamburgueria Artesanal. <br> Todos os direitos reservados.</p>
+        <p class="direitos"><small>© 2024 Hamburgueria Artesanal. <br> Todos os direitos reservados.</small></p>
     
         
     </footer>
