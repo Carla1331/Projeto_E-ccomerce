@@ -58,12 +58,12 @@ body {
 .next { right: 10px; }
 
 .cabecalho {
-    
-    background-color:white;
+    background-color: white;
     color: black;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 10px; /* Espaçamento entre os elementos */
     padding: 15px 30px;
     position: fixed;
     top: 0;
@@ -74,6 +74,12 @@ body {
     border-bottom: 2px solid #ccc;
 }
 
+/* Ajusta os elementos dentro do cabeçalho para espaçamento uniforme */
+.logo, .menu, .barra-pesquisa, .card-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 /* Estilo da Logo */
 .logo {
@@ -329,17 +335,16 @@ main {
     margin: 5px 0;
 }
 
-/* Container para os ícones de coração e carrinho */
 .card-icons {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Espaçamento aumentado entre os ícones */
-    margin-top: auto; /* Alinha ao final do botão */
+    gap: 5px; /* Espaçamento entre os ícones */
+    margin-top: auto;
     margin-bottom: 10px;
-    align-self: stretch; /* Garante que ocupe toda a largura disponível */
+    align-self: stretch;
 }
 
-/* Estilização dos ícones de coração e carrinho */
+/* Estilização dos botões de ícones */
 .icone-btn {
     background: transparent;
     border: none;
@@ -349,14 +354,16 @@ main {
 
 /* Ajuste dos ícones */
 .icone-btn img {
-    width: 25px; /* Tamanho dos ícones */
+    width: 25px;
     height: auto;
     transition: transform 0.2s;
 }
 
+/* Efeito hover */
 .icone-btn:hover img {
     transform: scale(1.1);
 }
+
 
 /* Estilização do botão "Comprar Agora" */
 .comprar-agora {
