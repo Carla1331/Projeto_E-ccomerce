@@ -5,7 +5,7 @@ const hamburgueres = [
         nome: "Hambúrguer Clássico",
         descricao: "Pão brioche, carne 150g, queijo cheddar, alface e tomate.",
         preco: "R$ 22,90",
-        imagem: "img/hamburguer.png",
+        imagem: "img/hamburguer-classico.png",
         tipo: "normal"
     },
     {
@@ -31,7 +31,7 @@ const hamburgueres = [
     },
     {
         nome: "Hambúrguer Supremo",
-        descricao: "Pão brioche, carne 200g, queijo suíço, cogumelos salteados e cebola caramelizada.",
+        descricao: "Pão brioche, carne 200g, queijo cheddar, bacon fatiado e cebola caramelizada.",
         preco: "R$ 36,90",
         imagem: "img/hamburguer-supremo.png",
         tipo: "normal"
@@ -117,27 +117,27 @@ const bebidas = [
     },
     {
         nome: "Coca-Cola",
+        descricao: "1L",
+        preco: "R$ 8,90",
+        imagem: "img/coca-cola-1lt.png"
+    },
+    {
+        nome: "Guaraná Antártica",
         descricao: "Lata 350ml.",
         preco: "R$ 5,90",
-        imagem: "coca.jpg"
+        imagem: "img/guarana.png"
+    },
+    {
+        nome: "Guaraná Mineiro",
+        descricao: "600ml.",
+        preco: "R$ 7,50",
+        imagem: "img/mineiro.png"
     },
     {
         nome: "Suco Natural",
-        descricao: "Laranja ou morango, 500ml.",
+        descricao: "Laranja/Morango/Abacaxi 500ml.",
         preco: "R$ 8,90",
-        imagem: "suco.jpg"
-    },
-    {
-        nome: "Suco Natural",
-        descricao: "Laranja ou morango, 500ml.",
-        preco: "R$ 8,90",
-        imagem: "suco.jpg"
-    },
-    {
-        nome: "Suco Natural",
-        descricao: "Laranja ou morango, 500ml.",
-        preco: "R$ 8,90",
-        imagem: "suco.jpg"
+        imagem: "img/sucos.png"
     }
 ];
 
