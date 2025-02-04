@@ -9,11 +9,7 @@ html {
 }
 
 body {
-<<<<<<< HEAD
-    background-color: rgb(176, 196, 222); /* Ou outra das opções acima */
-=======
-    background-color:rgb(176, 196, 222); /* Ou outra das opções acima */
->>>>>>> d42db865ee36653d9dea90edc505a5cd802accb5
+    background-color: rgb(183, 195, 209); /* Ou outra das opções acima */
 }
 .menu li a.active {
     font-weight: bold;
@@ -144,13 +140,8 @@ main {
     height: 16px;
 }
 
-<<<<<<< HEAD
 .carousel-item {
     background-color: rgb(255, 222, 173);
-=======
-.banner {
-    background-color:rgb(210, 105, 30);
->>>>>>> d42db865ee36653d9dea90edc505a5cd802accb5
     height: 735px;
     width: 100vw;
     display: flex;
@@ -358,7 +349,6 @@ main {
 }
 
 .icone-btn:hover img {
-
     transform: scale(1.1);
 }
 
