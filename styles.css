@@ -143,6 +143,7 @@ body {
     border: none;
     padding: 10px;
     cursor: pointer;
+    z-index: 10;
 }
 .prev { left: 10px; }
 .next { right: 10px; }
