@@ -9,13 +9,6 @@ const hamburgueres = [
         tipo: "normal"
     },
     {
-        nome: "Hambúrguer Clássico",
-        descricao: "Pão brioche, carne 150g, queijo cheddar, alface e tomate.",
-        preco: "R$ 22,90",
-        imagem: "img/hamburguer.png",
-        tipo: "normal"
-    },
-    {
         nome: "Hambúrguer Bacon",
         descricao: "Pão australiano, carne 180g, cheddar, bacon crocante e barbecue.",
         preco: "R$ 27,90",
