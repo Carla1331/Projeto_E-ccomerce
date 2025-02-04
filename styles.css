@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-image: url(../img/bg.png) ;
+    background-image: url(./img/bg.png) ;
     background-size: cover; /* Faz a imagem cobrir toda a tela */
   background-position: center; /* Centraliza a imagem */
   background-attachment: fixed; /* Faz com que a imagem fique fixa ao rolar a página */
