@@ -124,7 +124,7 @@ body {
 .carousel-item {
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
-    background-color: #ffdead;
+    background-color: rgb(243, 156, 18);
     height: 735px;
     width: 100vw;
     display: flex;
