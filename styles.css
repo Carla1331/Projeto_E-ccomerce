@@ -116,6 +116,7 @@ body {
     text-align: center;
     background-color: #ccc;
 }
+
 .carousel-inner {
     display: flex;
     overflow: hidden;
@@ -383,72 +384,57 @@ html.popup-aberto {
 
 .cardapio {
     text-align: center;
-    margin: 50px 0 20px; 
-    padding-top: 100px; 
-    margin-top: -100px;
+    padding-top: 5px; /* Ajuste para um topo mais suave */
+    margin: 50px auto;  /* Centraliza horizontalmente */
+    max-width: 1200px;   /* Limita a largura para o conteúdo não ficar muito largo */
 }
 
 .cardapio h2 {
     font-size: 1.2rem;
     color: #fffefe;
-    margin-bottom: 10px; /* Espaçamento inferior */
-    
+    margin-bottom: 10px;
 }
 
 .linha-separadora {
-
     width: 66%;
     height: 2px;
     background-color: rgb(243, 156, 18); /* Cor laranja */
-    margin: 0 auto 20px; /* Centraliza e adiciona margem inferior */
+    margin: 0 auto 20px;
     border-radius: 2px;
+    position: relative; /* Necessário para o posicionamento do botão */
 }
 
+/* Botão na extremidade da linha separadora */
+.linha-separadora .comprar-agora-btn {
+    position: absolute;
+    right: 0; /* Alinha o botão à direita da linha */
+    top: 50%; /* Centraliza verticalmente em relação à linha */
+    transform: translateY(-50%); /* Ajuste fino para centralizar */
+    background-color: #f39c12; /* Cor laranja para o botão */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 5;
+}
 
-/* Contêiner do slider */
-.slider-container {
+.slider-container, .slider-container-duplos, .slider-container-bebidas {
     position: relative;
-    width: 100%; /* O slider vai ocupar 100% da largura da tela */
-    overflow: hidden; /* Esconde os produtos que ficam fora da área visível */
-    margin: 0 auto; /* Garante que o slider ocupe o centro do espaço disponível */
-    display: flex;
-    justify-content: center;
-}
-/* Contêiner do slider */
-.slider-container-duplos {
-    position: relative;
-    width: 100%; /* O slider vai ocupar 100% da largura da tela */
-    overflow: hidden; /* Esconde os produtos que ficam fora da área visível */
-    margin: 0 auto; /* Garante que o slider ocupe o centro do espaço disponível */
-    display: flex;
-    justify-content: center;
-}
-/* Contêiner do slider */
-.slider-container-bebidas {
-    position: relative;
-    width: 100%; /* O slider vai ocupar 100% da largura da tela */
-    overflow: hidden; /* Esconde os produtos que ficam fora da área visível */
-    margin: 0 auto; /* Garante que o slider ocupe o centro do espaço disponível */
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
 }
 
-/* Grid dos produtos (com flexbox para mostrar os cards em linha) */
 .grid {
     display: flex;
-    transition: transform 0.5s ease; /* Transição suave quando os produtos se moverem */
-    gap: 15px; /* Espaço entre os cards */
+    transition: transform 0.5s ease;
+    gap: 15px;
 }
 
-/* Estilo de cada card */
-.card {
-    min-width: 220px; /* Largura mínima de cada card (ajustado para 4 produtos visíveis) */
-    flex-shrink: 0; /* Evita que os cards encolham */
-    text-align: center;
-    box-sizing: border-box; /* Garante que o padding/margem não afete a largura */
-}
-
-/* Botões de navegação */
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -469,6 +455,7 @@ html.popup-aberto {
 .slider-btn.next {
     right: 10px;
 }
+
 
 /* ############################### CARDS ################################# */
 
@@ -557,6 +544,7 @@ html.popup-aberto {
     margin: 30px auto;
     max-width: 300px;
     transition: background-color 0.3s;
+    z-index: 2000;
 }
 
 .abrir-popup:hover {
