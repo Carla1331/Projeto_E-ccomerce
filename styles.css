@@ -114,7 +114,7 @@ body {
     position: relative;
     max-width: 100%;
     text-align: center;
-    background-color: #ccc;
+    background: linear-gradient(180deg, rgba(243,156,18,1) 0%, rgba(241,196,15,1) 100%);
 }
 
 .carousel-inner {
