@@ -5,35 +5,35 @@ const hamburgueres = [
         nome: "Hambúrguer Clássico",
         descricao: "Pão brioche, carne 150g, queijo cheddar, alface e tomate.",
         preco: "R$ 22,90",
-        imagem: "img/hamburguer-classico.png",
+        imagem: "img/cards/card1.png",
         tipo: "normal"
     },
     {
         nome: "Hambúrguer Bacon",
         descricao: "Pão australiano, carne 180g, cheddar, bacon crocante e barbecue.",
         preco: "R$ 27,90",
-        imagem: "img/hamburguer-bacon.png",
+        imagem: "img/cards/card2.png",
         tipo: "normal"
     },
     {
         nome: "Hambúrguer Picante",
-        descricao: "Pão de brioche, carne 180g, cheddar, jalapeños e molho especial apimentado.",
+        descricao: "Pão de brioche, carne 180g, cheddar, jalapeños e molho apimentado.",
         preco: "R$ 28,90",
-        imagem: "img/hamburguer-picante.png",
+        imagem: "img/cards/card3.png",
         tipo: "normal"
     },
     {
         nome: "Veggie Burger",
         descricao: "Pão integral, hambúrguer de grão-de-bico, rúcula, tomate e molho pesto.",
         preco: "R$ 24,90",
-        imagem: "img/hamburguer-veggie.png",
+        imagem: "img/cards/card4.png",
         tipo: "normal"
     },
     {
         nome: "Hambúrguer Supremo",
         descricao: "Pão brioche, carne 200g, queijo cheddar, bacon fatiado e cebola caramelizada.",
         preco: "R$ 36,90",
-        imagem: "img/hamburguer-supremo.png",
+        imagem: "img/cards/card5.png",
         tipo: "normal"
     },
     // {
