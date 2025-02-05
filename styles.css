@@ -164,11 +164,24 @@ body {
     border-radius: 10px;
 }
 
-.carousel-item h1, 
-.carousel-item p {
-    color: #333;
+.carousel-text {
     text-align: left;
-    max-width: 40%;
+    max-width: 600px;
+}
+
+.carousel-item h1 {
+    font-size: 3.5rem; /* Tamanho maior para impacto */
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
+    font-size: 1.5rem; /* Menor que o título para ser complementar */
+    font-weight: 400;
+    color: #f1f1f1;
+    line-height: 1.5;
 }
 
 .prev, .next {
@@ -567,6 +580,7 @@ html.popup-aberto {
     max-width: 300px;
     transition: background-color 0.3s;
     z-index: 2000;
+    
 }
 
 .abrir-popup:hover {
@@ -803,49 +817,127 @@ html.popup-aberto {
 
 /* Responsivo */
 @media (max-width: 768px) {
-    .sobre-nos-banner {
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 10px 20px;
+    }
+
+    .menu {
+        display: none; /* Para ocultar o menu */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .logo, .barra-pesquisa, .card-icons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .barra-pesquisa input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        flex-direction: column;
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    .carousel-item img {
+        width: 80%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .carousel-item h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-item p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardapio {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .card img.produto-imagem {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .popup {
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sobre-nos {
+        padding: 100px 5%;
         flex-direction: column;
         align-items: center;
+    }
+
+    .sobre-nos-imagem {
         width: 90%;
+        height: auto;
+    }
+
+    .sobre-nos-banner {
+        width: 100%;
+        flex-direction: column;
         padding: 20px;
     }
 
     .sobre-nos-banner img {
         width: 100%;
         height: auto;
-        margin-bottom: 20px;
-    }
-
-    .sobre-nos-banner .content {
-        text-align: center;
-    }
-
-    .sobre-nos-banner h2 {
-        font-size: 24px;
-    }
-
-    .sobre-nos-banner p {
-        font-size: 14px;
+        margin-right: 0;
     }
 }
 
-/* Ajuste de layout responsivo */
+
 @media (max-width: 768px) {
-    .cabecalho {
-        flex-direction: column;
-        align-items: center;
+    .comprar-agora,
+    .comprar-agora-popup {
+        width: 100%;
+        padding: 12px;
     }
 
-    .menu {
-        margin: 10px 0;
-    }
-
-    .barra-pesquisa {
-        margin-top: 10px;
-    }
-
-    .carrinho {
-        margin-top: 10px;
+    .icon-btn img,
+    .icon-btn-popup img {
+        width: 30px;
     }
 }
 
