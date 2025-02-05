@@ -127,7 +127,7 @@ body {
     width: 100%;
     height: 100%;
     background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.1) 10px, rgba(255, 255, 255, 0.1) 20px);
-    z-index: 5;
+    z-index: 2;
     overflow: hidden;
 }
 
@@ -148,7 +148,7 @@ body {
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
     border-radius: 5px;
     opacity: 0.2;
-    z-index: 5;
+    z-index: 1;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -173,17 +173,37 @@ body {
     align-items: center;
     justify-content: center;
     gap: 50px;
-    /* Espaçamento entre imagem e texto */
     padding: 0 5%;
     min-width: 100%;
-    /* Faz com que cada slide ocupe 100% do espaço do carrossel */
     position: absolute;
-    /* Mantém todos os itens na mesma posição */
     top: 0;
     left: 0;
 }
 
-
+.imagem-slide-1 {
+    width: 100%;
+    max-height: 400px; /* ajuste conforme necessário */
+    object-fit: cover;
+  }
+  
+  .imagem-slide-2 {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .imagem-slide-3 {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .imagem-slide-4 {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
 
 .carousel-item.fade-in {
     opacity: 1;
@@ -207,12 +227,7 @@ body {
     flex-direction: row-reverse;
     /* Imagem à direita, texto à esquerda */
 }
-
-.carousel-item img {
-    height: 300px;
-    width: 300px;
-    border-radius: 10px;
-}
+ 
 
 .carousel-text {
     text-align: left;
@@ -223,7 +238,7 @@ body {
     font-size: 3.5rem;
     /* Tamanho maior para impacto */
     font-weight: bold;
-    color: #fff;
+    color: #000000;
     text-transform: uppercase;
     margin-bottom: 10px;
     font-family: "Inter Tight", serif;
@@ -236,7 +251,7 @@ body {
 .carousel-item p {
     font-size: 1.5rem;
     /* Menor que o título para ser complementar */
-    color: #f1f1f1;
+    color: #000000;
     line-height: 1.5;
     font-family: "Quicksand", serif;
     font-optical-sizing: auto;
