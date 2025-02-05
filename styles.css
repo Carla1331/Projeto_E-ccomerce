@@ -985,23 +985,7 @@ html.popup-aberto {
 
 /* ############################### RESPONSIVIDADE ################################# */
 
-/* Responsivo */
 @media (max-width: 768px) {
-    .logo h1 {
-        font-size: 18px;
-    }
-
-    .logo img {
-        width: 40px;
-        height: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .cabecalho {
-        padding: 10px 20px;
-    }
-
     .menu {
         display: none;
         /* Para ocultar o menu */
@@ -1014,6 +998,14 @@ html.popup-aberto {
         text-align: center;
     }
 
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: auto;
+    }
     .logo,
     .barra-pesquisa,
     .card-icons {
@@ -1052,7 +1044,90 @@ html.popup-aberto {
     }
 }
 
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 10px 20px;
+        flex-direction: column;
+        padding: 1rem; /* Reduzindo o padding para telas pequenas */
+        height: auto;
+    }
+    
+    .logo,
+    .menu,
+    .barra-pesquisa,
+    .card-icons {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .barra-pesquisa {
+        width: 100%;
+        max-width: 280px;
+    }
 
+    .barra-pesquisa input {
+        width: 100px;
+        font-size: 14px;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .popup {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .combo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .combo img {
+        width: 100px;
+    }
+
+    .comprar-agora-popup {
+        width: 70%;
+    }
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .cardapio {
+        max-width: 90%;
+    }
+
+    .linha-separadora {
+        width: 80%;
+    }
+
+    .linha-separadora .comprar-agora-btn {
+        right: 0;
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .slider-btn {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .barra-pesquisa {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .barra-pesquisa input {
+        width: 100px;
+        font-size: 14px;
+    }
+}
 
 @media (max-width: 768px) {
     .card {
@@ -1078,37 +1153,60 @@ html.popup-aberto {
         width: 24px;
     }
 }
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .abrir-popup, 
+    .comprar-agora {
+        font-size: 14px;
+        padding: 10px 15px;
+        max-width: 250px;
+    }
+}
+
+
 @media (max-width: 768px) {
     .popup {
         width: 80%;
     }
 }
 
-
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .sobre-nos {
-        padding: 100px 5%;
+        padding: 80px 5%;
+    }
+
+    .sobre-nos-container {
         flex-direction: column;
         align-items: center;
     }
 
     .sobre-nos-imagem {
-        width: 90%;
+        width: 100%;
         height: auto;
     }
 
     .sobre-nos-banner {
-        width: 100%;
         flex-direction: column;
+        height: auto;
         padding: 20px;
     }
 
     .sobre-nos-banner img {
         width: 100%;
-        height: auto;
-        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .sobre-nos-banner h2 {
+        font-size: 24px;
+    }
+
+    .sobre-nos-banner p {
+        font-size: 14px;
     }
 }
+
 
 
 @media (max-width: 768px) {
