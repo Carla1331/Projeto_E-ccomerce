@@ -302,7 +302,7 @@ let indiceSlide = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
     mostrarSlide(indiceSlide);
-    setInterval(() => mudarSlide(1), 10000); // Troca de slide a cada 4 segundos
+    setInterval(() => mudarSlide(1), 10000); // Troca de slide a cada 10 segundos
 });
 
 function mudarSlide(n) {
@@ -321,10 +321,12 @@ function mudarSlide(n) {
 
     setTimeout(() => {
         for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+            slides[i].style.visibility = "hidden";
+            slides[i].style.opacity = "0";
             slides[i].classList.remove("fade-in", "fade-out");
         }
-        slides[indiceSlide].style.display = "block";
+        slides[indiceSlide].style.visibility = "visible";
+        slides[indiceSlide].style.opacity = "1";
         slides[indiceSlide].classList.add("fade-in");
     }, 500); // Tempo da animação (0.5s)
 }
@@ -332,9 +334,11 @@ function mudarSlide(n) {
 function mostrarSlide(n) {
     let slides = document.getElementsByClassName("carousel-item");
     for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].style.visibility = "hidden";
+        slides[i].style.opacity = "0";
         slides[i].classList.remove("fade-in", "fade-out");
     }
-    slides[n].style.display = "block";
+    slides[n].style.visibility = "visible";
+    slides[n].style.opacity = "1";
     slides[n].classList.add("fade-in");
 }

@@ -117,40 +117,60 @@ body {
     background: linear-gradient(180deg, rgba(243,156,18,1) 0%, rgba(241,196,15,1) 100%);
 }
 
-.carousel-inner {
-    display: flex;
-    overflow: hidden;
-}
+
 .carousel-item {
     opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     background: linear-gradient(180deg, rgba(243,156,18,1) 0%, rgba(241,196,15,1) 100%);
     height: 735px;
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    position: relative;
+    justify-content: center;
+    gap: 50px; /* Espaçamento entre imagem e texto */
+    padding: 0 5%;
+    min-width: 100%; /* Faz com que cada slide ocupe 100% do espaço do carrossel */
+    position: absolute; /* Mantém todos os itens na mesma posição */
     top: 0;
+    left: 0;
 }
+
 
 
 .carousel-item.fade-in {
     opacity: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .carousel-item.fade-out {
-    opacity: 0;
+    opacity: 1;
+    position: relative;
+    z-index: 1;
 }
+
+/* Alternância entre slides */
+.carousel-item:nth-child(odd) {
+    flex-direction: row; /* Imagem à esquerda, texto à direita */
+}
+
+.carousel-item:nth-child(even) {
+    flex-direction: row-reverse; /* Imagem à direita, texto à esquerda */
+}
+
 .carousel-item img {
-    width: 100%;
-    height: auto;
+    height: 500px;
+    width: auto;
     border-radius: 10px;
 }
-.carousel-item h1, .carousel-item p {
-    margin: 10px 0;
+
+.carousel-item h1, 
+.carousel-item p {
     color: #333;
+    text-align: left;
+    max-width: 40%;
 }
+
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -162,11 +182,13 @@ body {
     cursor: pointer;
     z-index: 10;
 }
+
 .prev { left: 10px; }
 .next { right: 10px; }
 
 
-.carousel-item h1 {
+
+carousel-item h1 {
     font-size: 3rem;
     margin: 0;
 }
@@ -177,7 +199,7 @@ body {
 }
 
 .carousel-item img {
-    height: 500px;
+    height: 320px;
     margin-top: 60px;
     padding-right: 30px;
     width: auto;
