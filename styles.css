@@ -1171,31 +1171,99 @@ html.popup-aberto {
     }
 }
 
-@media (max-width: 480px) {
-    /* Para smartphones modernos */
+@media (max-width: 768px) {
+    /* Ocultar os itens do menu em dispositivos móveis */
+    .menu li.inicio,
+    .menu li.cardapio,
+    .menu li.sobre,
+    .menu li.contato {
+        display: none;
+    }
+
+    /* Centralizar o carrossel/banner */
+    .carousel-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .carousel-item img {
+        width: 80%;
+        max-width: 100%;
+        margin-top: 20px;
+        display: block; /* Garante que a imagem esteja centralizada */
+    }
+
+    .carousel-item h1 {
+        font-size: 2rem;
+        margin-top: 15px;
+    }
+
+    .carousel-item p {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    /* Outras mudanças de responsividade já implementadas */
     .menu {
-        display: block;
+        display: none;
+        flex-direction: column;
+        width: 100%;
     }
 
     .menu li {
-        margin: 8px 0;
+        margin: 10px 0;
+        text-align: center;
     }
 
     .logo h1 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .logo img {
         width: 40px;
+        height: auto;
+    }
+
+    .logo,
+    .card-icons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .cabecalho {
+        padding: 5px 10px;
+        flex-direction: column;
+        padding: 0.2rem; /* Reduzindo o padding para telas pequenas */
+        height: 100px;
+    }
+
+    .barra-pesquisa {
+        width: 100%;
+        max-width: 280px;
     }
 
     .barra-pesquisa input {
+        width: 100%;
+        justify-content: space-between;
         font-size: 14px;
     }
 
     .popup {
         width: 90%;
-        padding: 15px;
+        padding: 20px;
+    }
+
+    .combo {
+        flex-direction: column;
+        text-align: center;
     }
 
     .combo img {
@@ -1203,61 +1271,99 @@ html.popup-aberto {
     }
 
     .comprar-agora-popup {
-        width: 85%;
+        width: 70%;
     }
 
     .cardapio {
-        width: 100%;
+        max-width: 90%;
+    }
+
+    .linha-separadora {
+        width: 80%;
+    }
+
+    .linha-separadora .comprar-agora-btn {
+        right: 0;
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .slider-btn {
+        padding: 8px;
+        font-size: 18px;
     }
 
     .card {
-        width: 200px;
-        height: 300px;
-        font-size: 10px;
+        width: 220px;
+        height: 330px;
+        font-size: 11px;
     }
 
     .card img.produto-imagem {
-        width: 60%;
-        max-height: 100px;
+        width: 70%;
+        max-height: 120px;
     }
 
     .card h3 {
-        font-size: 12px;
-    }
-
-    .card .preco {
         font-size: 13px;
     }
 
+    .card .preco {
+        font-size: 14px;
+    }
+
     .icone-btn img {
-        width: 22px;
+        width: 24px;
     }
 
     .abrir-popup, 
     .comprar-agora {
-        font-size: 12px;
-        padding: 8px 14px;
+        font-size: 14px;
+        padding: 10px 15px;
+        max-width: 250px;
     }
 
     .sobre-nos {
-        padding: 60px 5%;
+        padding: 80px 5%;
+    }
+
+    .sobre-nos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre-nos-imagem {
+        width: 100%;
+        height: auto;
+    }
+
+    .sobre-nos-banner {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .sobre-nos-banner img {
+        width: 100%;
+        margin-bottom: 15px;
     }
 
     .sobre-nos-banner h2 {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .sobre-nos-banner p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .comprar-agora,
     .comprar-agora-popup {
-        padding: 10px;
+        width: 100%;
+        padding: 12px;
     }
 
     .icon-btn img,
     .icon-btn-popup img {
-        width: 28px;
+        width: 30px;
     }
 }
