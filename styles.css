@@ -1007,7 +1007,6 @@ html.popup-aberto {
         height: auto;
     }
     .logo,
-    .barra-pesquisa,
     .card-icons {
         width: 100%;
         justify-content: space-between;
@@ -1017,9 +1016,7 @@ html.popup-aberto {
         display: block;
     }
 
-    .barra-pesquisa input {
-        width: 100%;
-    }
+
 }
 
 @media (max-width: 768px) {
@@ -1066,11 +1063,12 @@ html.popup-aberto {
         width: 100%;
         max-width: 280px;
     }
-
     .barra-pesquisa input {
-        width: 100px;
+        width: 100%;
+        justify-content: space-between;
         font-size: 14px;
     }
+
 }
 
 /* Responsividade */
@@ -1116,18 +1114,6 @@ html.popup-aberto {
     }
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .barra-pesquisa {
-        width: 100%;
-        max-width: 280px;
-    }
-
-    .barra-pesquisa input {
-        width: 100px;
-        font-size: 14px;
-    }
-}
 
 @media (max-width: 768px) {
     .card {
@@ -1164,12 +1150,6 @@ html.popup-aberto {
     }
 }
 
-
-@media (max-width: 768px) {
-    .popup {
-        width: 80%;
-    }
-}
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
