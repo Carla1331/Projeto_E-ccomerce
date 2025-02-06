@@ -1045,8 +1045,8 @@ html.popup-aberto {
     .cabecalho {
         padding: 5px 10px;
         flex-direction: column;
-        padding: 1rem; /* Reduzindo o padding para telas pequenas */
-        height: auto;
+        padding: 0.2rem; /* Reduzindo o padding para telas pequenas */
+        height: 30px;
     }
     
     .logo,
