@@ -985,27 +985,28 @@ html.popup-aberto {
 
 /* ############################### RESPONSIVIDADE ################################# */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    /* Para tablets e dispositivos de tamanhos intermediários */
     .menu {
         display: none;
-        /* Para ocultar o menu */
         flex-direction: column;
         width: 100%;
     }
 
     .menu li {
-        margin: 10px 0;
+        margin: 12px 0;
         text-align: center;
     }
 
     .logo h1 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .logo img {
-        width: 40px;
+        width: 45px;
         height: auto;
     }
+
     .logo,
     .card-icons {
         width: 100%;
@@ -1019,46 +1020,44 @@ html.popup-aberto {
     .carousel-item {
         flex-direction: column;
         height: auto;
-        /* Ajusta a altura automaticamente */
     }
 
     .carousel-item img {
-        width: 80%;
+        width: 85%;
         max-width: 100%;
         margin-top: 20px;
     }
 
     .carousel-item h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .carousel-item p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .cabecalho {
-        padding: 5px 10px;
+        padding: 10px;
         flex-direction: column;
-        padding: 0.2rem; /* Reduzindo o padding para telas pequenas */
-        height: 100px;
+        height: auto;
     }
-    
+
     .logo,
     .menu,
     .barra-pesquisa,
     .card-icons {
         justify-content: center;
-        gap: 0.5rem;
+        gap: 1rem;
     }
 
     .barra-pesquisa {
         width: 100%;
-        max-width: 280px;
+        max-width: 320px;
     }
+
     .barra-pesquisa input {
         width: 100%;
-        justify-content: space-between;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .popup {
@@ -1072,64 +1071,64 @@ html.popup-aberto {
     }
 
     .combo img {
-        width: 100px;
+        width: 120px;
     }
 
     .comprar-agora-popup {
-        width: 70%;
+        width: 75%;
     }
 
     .cardapio {
-        max-width: 90%;
+        max-width: 85%;
     }
 
     .linha-separadora {
-        width: 80%;
+        width: 85%;
     }
 
     .linha-separadora .comprar-agora-btn {
         right: 0;
-        font-size: 0.9rem;
-        padding: 6px 12px;
+        font-size: 1rem;
+        padding: 8px 15px;
     }
 
     .slider-btn {
-        padding: 8px;
-        font-size: 18px;
+        padding: 10px;
+        font-size: 20px;
     }
 
     .card {
-        width: 220px;
-        height: 330px;
-        font-size: 11px;
+        width: 230px;
+        height: 350px;
+        font-size: 12px;
     }
 
     .card img.produto-imagem {
-        width: 70%;
-        max-height: 120px;
+        width: 80%;
+        max-height: 130px;
     }
 
     .card h3 {
-        font-size: 13px;
-    }
-
-    .card .preco {
         font-size: 14px;
     }
 
+    .card .preco {
+        font-size: 15px;
+    }
+
     .icone-btn img {
-        width: 24px;
+        width: 28px;
     }
 
     .abrir-popup, 
     .comprar-agora {
-        font-size: 14px;
-        padding: 10px 15px;
-        max-width: 250px;
+        font-size: 16px;
+        padding: 12px 18px;
+        max-width: 280px;
     }
 
     .sobre-nos {
-        padding: 80px 5%;
+        padding: 100px 5%;
     }
 
     .sobre-nos-container {
@@ -1144,38 +1143,121 @@ html.popup-aberto {
 
     .sobre-nos-banner {
         flex-direction: column;
-        height: auto;
-        padding: 20px;
+        padding: 25px;
     }
 
     .sobre-nos-banner img {
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     .sobre-nos-banner h2 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .sobre-nos-banner p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .comprar-agora,
     .comprar-agora-popup {
         width: 100%;
-        padding: 12px;
+        padding: 14px;
     }
 
     .icon-btn img,
     .icon-btn-popup img {
-        width: 30px;
+        width: 35px;
     }
 }
 
-.icones-sociais {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
+@media (max-width: 480px) {
+    /* Para smartphones modernos */
+    .menu {
+        display: block;
+    }
+
+    .menu li {
+        margin: 8px 0;
+    }
+
+    .logo h1 {
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .barra-pesquisa input {
+        font-size: 14px;
+    }
+
+    .popup {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .combo img {
+        width: 100px;
+    }
+
+    .comprar-agora-popup {
+        width: 85%;
+    }
+
+    .cardapio {
+        width: 100%;
+    }
+
+    .card {
+        width: 200px;
+        height: 300px;
+        font-size: 10px;
+    }
+
+    .card img.produto-imagem {
+        width: 60%;
+        max-height: 100px;
+    }
+
+    .card h3 {
+        font-size: 12px;
+    }
+
+    .card .preco {
+        font-size: 13px;
+    }
+
+    .icone-btn img {
+        width: 22px;
+    }
+
+    .abrir-popup, 
+    .comprar-agora {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .sobre-nos {
+        padding: 60px 5%;
+    }
+
+    .sobre-nos-banner h2 {
+        font-size: 20px;
+    }
+
+    .sobre-nos-banner p {
+        font-size: 12px;
+    }
+
+    .comprar-agora,
+    .comprar-agora-popup {
+        padding: 10px;
+    }
+
+    .icon-btn img,
+    .icon-btn-popup img {
+        width: 28px;
+    }
 }
