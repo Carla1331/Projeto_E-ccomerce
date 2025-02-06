@@ -1016,10 +1016,6 @@ html.popup-aberto {
         display: block;
     }
 
-
-}
-
-@media (max-width: 768px) {
     .carousel-item {
         flex-direction: column;
         height: auto;
@@ -1039,14 +1035,12 @@ html.popup-aberto {
     .carousel-item p {
         font-size: 1rem;
     }
-}
 
-@media (max-width: 768px) {
     .cabecalho {
         padding: 5px 10px;
         flex-direction: column;
         padding: 0.2rem; /* Reduzindo o padding para telas pequenas */
-        height: 30px;
+        height: 100px;
     }
     
     .logo,
@@ -1056,9 +1050,7 @@ html.popup-aberto {
         justify-content: center;
         gap: 0.5rem;
     }
-}
-/* Responsividade */
-@media (max-width: 768px) {
+
     .barra-pesquisa {
         width: 100%;
         max-width: 280px;
@@ -1069,10 +1061,6 @@ html.popup-aberto {
         font-size: 14px;
     }
 
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
     .popup {
         width: 90%;
         padding: 20px;
@@ -1090,10 +1078,7 @@ html.popup-aberto {
     .comprar-agora-popup {
         width: 70%;
     }
-}
 
-/* Responsividade para dispositivos menores */
-@media (max-width: 768px) {
     .cardapio {
         max-width: 90%;
     }
@@ -1112,10 +1097,7 @@ html.popup-aberto {
         padding: 8px;
         font-size: 18px;
     }
-}
 
-
-@media (max-width: 768px) {
     .card {
         width: 220px;
         height: 330px;
@@ -1138,21 +1120,14 @@ html.popup-aberto {
     .icone-btn img {
         width: 24px;
     }
-}
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
     .abrir-popup, 
     .comprar-agora {
         font-size: 14px;
         padding: 10px 15px;
         max-width: 250px;
     }
-}
 
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
     .sobre-nos {
         padding: 80px 5%;
     }
@@ -1185,11 +1160,6 @@ html.popup-aberto {
     .sobre-nos-banner p {
         font-size: 14px;
     }
-}
-
-
-
-@media (max-width: 768px) {
 
     .comprar-agora,
     .comprar-agora-popup {
