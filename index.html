@@ -74,7 +74,7 @@
   <main>
     <section class="banner" id="inicio">
       <div class="carousel">
-        <!-- Fundo com o selo BurgerCraft -->
+        
         <div class="carousel-background"></div>
     
         <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
@@ -126,22 +126,24 @@
     </section>
 
     <section class="oferta-do-dia">
-      <button class="abrir-popup" onclick="abrirPopup()">Aproveite as nossas ofertas do dia</button>
-      <div class="popup" id="popup" style="display: none;">
-        <h2>Oferta do Dia</h2>
-        <img src="./img/combo1.png" alt="Combo do Dia">
-        <h3>Combo Smash + Refri</h3>
-        <p>Hambúrguer artesanal + batata + refrigerante.</p>
-        <span class="preco">R$ 29,90</span>
-        <div class="botoes">
-          <button class="icone-btn-popup">
-            <img src="img/carrinho.png" alt="Carrinho de Compras">
-          </button>
-          <button class="comprar-agora-popup">Comprar Agora</button>
+        <button class="abrir-popup">Aproveite as nossas ofertas do dia</button>
+        <div class="popup" id="popup" style="display: none;">
+            <h2>Oferta do Dia</h2>
+            <img src="./img/combo1.png" alt="Combo do Dia">
+            <h3>Combo Smash + Refri</h3>
+            <p>Hambúrguer artesanal + batata + refrigerante.</p>
+            <span class="preco">R$ 29,90</span>
+            <div class="botoes">
+                <button class="icone-btn-popup">
+                    <img src="img/carrinho.png" alt="Carrinho de Compras">
+                </button>
+                <button class="comprar-agora-popup">Comprar Agora</button>
+            </div>
+            <button class="fechar" onclick="fecharPopup()">Fechar</button>
         </div>
-        <button class="fechar" onclick="fecharPopup()">Fechar</button>
-      </div>
     </section>
+    
+    
 
 
 
@@ -255,7 +257,7 @@
 
 </body>
 
-<!-- Inclua seu script no final do body -->
+
 <script src="script.js"></script>
 
 </html>

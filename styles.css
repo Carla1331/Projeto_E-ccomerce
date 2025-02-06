@@ -179,10 +179,11 @@ body {
     gap: 3.125rem; /* 50px em rem */
     padding: 0 5%;
     min-width: 100%;
-    position: absolute;
+    position:relative;
     top: 0;
     left: 0;
 }
+
 
 .carousel-item.fade-in {
     opacity: 1;
@@ -225,12 +226,13 @@ body {
     margin-top: 0.625rem; /* 10px em rem */
 }
 
+
 .carousel-item img {
-    height: 20rem; /* 320px em rem */
-    margin-top: 3.75rem; /* 60px em rem */
-    padding-right: 1.875rem; /* 30px em rem */
-    width: auto;
-    object-fit: cover;
+    width: 30rem; /* Define uma largura fixa maior */
+    height: 30rem; /* Define uma altura fixa maior */
+    object-fit: contain; /* Mantém a proporção sem cortes */
+    margin-top: 0; /* Remove margens adicionais */
+    padding-right: 0; /* Remove padding extra */
 }
 
 .prev,
@@ -335,23 +337,28 @@ body {
 
 .abrir-popup {
     text-align: center;
-    color: white;
-    padding: 20px;
+    color: black;
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    padding: 15px 30px; 
     border: none;
-    background: #f0c003;
-    background-color: #f0c003;
-    border-radius: 10px;
-    margin: 30px auto;
+    background: #f0c003; 
+    border-radius: 30px; 
+    margin: 100px auto;
     max-width: 300px;
-    transition: background-color 0.3s;
-    z-index: 2000;
-
+    transition: all 0.3s ease-in-out; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+    display: inline-block;
 }
 
 .abrir-popup:hover {
-    background-color: #d49e00;
-    transform: scale(1.1);
+    background: #d49e00; 
+    transform: scale(1.1) rotate(2deg); 
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
 }
+
+
 
 
 .comprar-agora:hover {
@@ -368,10 +375,7 @@ main {
 }
 
 .popup {
-    position: fixed;
-    top: 38%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
     background: white;
     padding: 30px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -379,9 +383,7 @@ main {
     display: none;
     width: 455px;
     text-align: center;
-    display: none;
     z-index: 9999;
-    
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -391,7 +393,9 @@ main {
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* Efeito de fechamento */
+
+
+
 .popup.fechar-popup {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.9);
@@ -399,19 +403,17 @@ main {
 }
 
 
-/* Bloquear a rolagem da página quando o popup estiver visível */
+
 body.popup-aberto {
     overflow: hidden;
-    /* Desabilitar rolagem */
     height: 100%;
-    /* Garantir que o body ocupe a altura total */
+   
 }
 
-/* Certificar-se de que a rolagem não é permitida em html também */
 html.popup-aberto {
     overflow: hidden;
     height: 100%;
-    /* Garantir que o HTML também ocupe a altura total */
+    
 }
 
 .popup img {
@@ -419,15 +421,12 @@ html.popup-aberto {
     border-radius: 8px;
 }
 
-/* Ajuste da disposição dos botões */
+
 .botoes {
     display: flex;
     flex-direction: column;
-    /* Inverte a ordem: o último elemento fica no topo */
     align-items: center;
-    /* Centraliza os botões horizontalmente */
     gap: 2px;
-    /* Espaçamento entre os botões */
     margin-top: 0px;
 }
 
@@ -439,7 +438,7 @@ html.popup-aberto {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 5px;
-    /* Adiciona um espaço entre o botão Fechar e os outros botões */
+    
 }
 
 .fechar:hover {
@@ -469,7 +468,7 @@ html.popup-aberto {
     color: #c00;
 }
 
-/* Estilização do botão "Comprar Agora" */
+
 .comprar-agora-popup {
     background-color: #f0c003;
     color: white;
@@ -490,7 +489,7 @@ html.popup-aberto {
     transform: scale(1.1);
 }
 
-/* Estilização dos botões de ícones */
+
 .icone-btn-popup {
     background: transparent;
     border: none;
@@ -498,14 +497,13 @@ html.popup-aberto {
     padding: 5px;
 }
 
-/* Ajuste dos ícones */
+
 .icone-btn-popup img {
     width: 30px;
     height: auto;
     transition: transform 0.2s;
 }
 
-/* Efeito hover */
 .icone-btn-popup:hover img {
     transform: scale(1.1);
 }
@@ -516,11 +514,9 @@ html.popup-aberto {
 .cardapio {
     text-align: center;
     padding-top: 5px;
-    /* Ajuste para um topo mais suave */
-    margin: 50px auto;
-    /* Centraliza horizontalmente */
+    margin: 5px auto;
     max-width: 1200px;
-    /* Limita a largura para o conteúdo não ficar muito largo */
+    
 }
 
 .cardapio h2 {
@@ -534,27 +530,23 @@ html.popup-aberto {
 }
 
 .linha-separadora {
-    width: 66%;
+    width: 100%;
     height: 2px;
     background-color: rgb(243, 156, 18);
     /* Cor laranja */
     margin: 0 auto 20px;
     border-radius: 2px;
     position: relative;
-    /* Necessário para o posicionamento do botão */
+    
 }
 
-/* Botão na extremidade da linha separadora */
+
 .linha-separadora .comprar-agora-btn {
     position: absolute;
     right: 0;
-    /* Alinha o botão à direita da linha */
     top: 50%;
-    /* Centraliza verticalmente em relação à linha */
     transform: translateY(-50%);
-    /* Ajuste fino para centralizar */
     background-color: #f39c12;
-    /* Cor laranja para o botão */
     color: white;
     padding: 10px 20px;
     font-size: 1rem;
@@ -578,7 +570,7 @@ html.popup-aberto {
 .grid {
     display: flex;
     transition: transform 0.5s ease;
-    gap: 5px;
+    gap: 10px;
 }
 
 .slider-btn {
@@ -605,7 +597,7 @@ html.popup-aberto {
 
 /* ############################### CARDS ################################# */
 
-/* Estilização geral dos cards */
+
 .card {
     font-size: 12px;
     width: 250px;
@@ -625,28 +617,24 @@ html.popup-aberto {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Efeito hover no card */
+
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 
-/* Estilização da imagem dentro do card */
+
 .card img.produto-imagem {
     width: 60%;
-    /* Ajuste para centralizar melhor */
     max-height: 120px;
-    /* Mantém a proporção */
     object-fit: contain;
-    /* Evita distorção */
     display: block;
     margin: 0 auto;
-    /* Centraliza a imagem */
     margin-top: 15px;
 }
 
-/* Estilização do título e preço */
+
 .card h3 {
     margin: 10px 0;
 }
@@ -663,13 +651,12 @@ html.popup-aberto {
     display: flex;
     justify-content: center;
     gap: 5px;
-    /* Espaçamento entre os ícones */
     margin-top: auto;
     margin-bottom: 10px;
     align-self: stretch;
 }
 
-/* Estilização dos botões de ícones */
+
 .icone-btn {
     background: transparent;
     border: none;
@@ -677,14 +664,13 @@ html.popup-aberto {
     padding: 5px;
 }
 
-/* Ajuste dos ícones */
 .icone-btn img {
     width: 25px;
     height: auto;
     transition: transform 0.2s;
 }
 
-/* Efeito hover nos ícones */
+
 .icone-btn:hover img {
     transform: scale(1.15);
 }
@@ -708,7 +694,7 @@ html.popup-aberto {
     position: relative;
 }
 
-/* Imagem da seção */
+
 .sobre-nos-imagem {
     width: 550px;
     height: 400px;
@@ -716,7 +702,7 @@ html.popup-aberto {
     object-fit: cover;
 }
 
-/* Banner de conteúdo */
+
 .sobre-nos-banner {
     display: flex;
     align-items: flex-start;
@@ -731,7 +717,7 @@ html.popup-aberto {
     overflow: hidden;
 }
 
-/* Imagem dentro do banner */
+
 .sobre-nos-banner img {
     width: 50%;
     height: 100%;
@@ -740,7 +726,7 @@ html.popup-aberto {
     margin-right: 20px;
 }
 
-/* Conteúdo textual */
+
 .sobre-nos-banner .content {
     flex: 1;
     text-align: left;
@@ -748,7 +734,7 @@ html.popup-aberto {
     flex-direction: column;
 }
 
-/* Título */
+
 .sobre-nos-banner h2 {
     font-size: 28px;
     margin-bottom: 15px;
@@ -756,7 +742,7 @@ html.popup-aberto {
     font-weight: 700;
 }
 
-/* Parágrafo */
+
 .sobre-nos-banner p {
     font-size: 16px;
     line-height: 1.6;
@@ -764,7 +750,7 @@ html.popup-aberto {
     font-weight: 300;
 }
 
-/* Responsividade para telas menores */
+
 @media (max-width: 768px) {
     .sobre-nos {
         padding: 80px 5%;
@@ -813,7 +799,7 @@ html.popup-aberto {
     border-radius: 30px;
 }
 
-/* Título */
+
 .titulo-contato {
     font-size: 24px;
     color: black;
@@ -823,7 +809,7 @@ html.popup-aberto {
     font-weight: 800;
 }
 
-/* Container principal */
+
 .container-contato {
     display: flex;
     width: 90%;
@@ -833,7 +819,7 @@ html.popup-aberto {
     gap: 50px;
 }
 
-/* Lado esquerdo - Informações */
+
 .contato-info {
     width: 40%;
     text-align: left;
@@ -847,7 +833,7 @@ html.popup-aberto {
     font-weight: 600;
 }
 
-/* Lado direito - Formulário */
+
 .formulario-contato {
     width: 60%;
     display: flex;
@@ -915,17 +901,17 @@ html.popup-aberto {
 /* ############################### FOOTER ################################# */
 /* Rodapé */
 .rodape {
-    background-color: rgba(0, 0, 0, 0.6); /* Cor semitransparente */
+    background-color: rgba(0, 0, 0, 0.6); 
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
     width: 100%;
-    flex-wrap: wrap; /* Permite melhor ajuste em telas menores */
+    flex-wrap: wrap; 
 }
 
-/* Centraliza os ícones de redes sociais */
+
 .rodape .icones-sociais {
     display: flex;
     gap: 15px;
@@ -933,7 +919,7 @@ html.popup-aberto {
     align-items: center;
 }
 
-/* Ícones das redes sociais */
+
 .rodape .icones-sociais a {
     display: flex;
     justify-content: center;
@@ -944,31 +930,30 @@ html.popup-aberto {
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* Efeito de hover nos ícones */
+
 .rodape .icones-sociais a:hover {
-    background: #f0c003; /* Cor de fundo ao passar o mouse */
+    background: #f0c003; 
     transform: scale(1.1);
 }
 
-/* Estilo para as imagens dentro dos links */
+
 .rodape .icones-sociais img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Direitos autorais */
+
 .rodape .direitos {
     font-size: 14px;
     text-align: left;
 }
 
-/* Logo no rodapé */
+
 .rodape .logo-rodape {
     text-align: right;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .rodape {
         flex-direction: column;
@@ -986,7 +971,7 @@ html.popup-aberto {
 /* ############################### RESPONSIVIDADE ################################# */
 
 @media (max-width: 1024px) {
-    /* Para tablets e dispositivos de tamanhos intermediários */
+    
     .menu {
         display: none;
         flex-direction: column;
@@ -1172,7 +1157,7 @@ html.popup-aberto {
 }
 
 @media (max-width: 768px) {
-    /* Ocultar os itens do menu em dispositivos móveis */
+    
     .menu li.inicio,
     .menu li.cardapio,
     .menu li.sobre,
@@ -1180,7 +1165,7 @@ html.popup-aberto {
         display: none;
     }
 
-    /* Centralizar o carrossel/banner */
+    
     .carousel-item {
         display: flex;
         justify-content: center;
@@ -1194,7 +1179,7 @@ html.popup-aberto {
         width: 80%;
         max-width: 100%;
         margin-top: 20px;
-        display: block; /* Garante que a imagem esteja centralizada */
+        display: block; 
     }
 
     .carousel-item h1 {
@@ -1207,7 +1192,7 @@ html.popup-aberto {
         margin-top: 10px;
     }
 
-    /* Outras mudanças de responsividade já implementadas */
+    
     .menu {
         display: none;
         flex-direction: column;
@@ -1241,7 +1226,7 @@ html.popup-aberto {
     .cabecalho {
         padding: 5px 10px;
         flex-direction: column;
-        padding: 0.2rem; /* Reduzindo o padding para telas pequenas */
+        padding: 0.2rem;
         height: 100px;
     }
 
@@ -1318,21 +1303,21 @@ html.popup-aberto {
 
     .card-icons {
         display: flex;
-        justify-content: center; /* Centraliza os itens horizontalmente */
-        align-items: center;     /* Alinha os itens verticalmente */
-        gap: 1rem;               /* Adiciona um espaçamento entre os ícones */
+        justify-content: center; 
+        align-items: center;   
+        gap: 1rem;              
         width: 100%;
     }
     
     .icone-btn {
-        display: inline-flex;     /* Garante que o botão se comporte como um item de linha */
-        justify-content: center;  /* Alinha o conteúdo dentro do botão */
-        align-items: center;      /* Alinha o conteúdo verticalmente dentro do botão */
+        display: inline-flex;     
+        justify-content: center;  
+        align-items: center;     
         padding: 10px;
     }
     
     .icone-btn i {
-        font-size: 24px; /* Ajusta o tamanho do ícone */
+        font-size: 24px; 
     }
  
 

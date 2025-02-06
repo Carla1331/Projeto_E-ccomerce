@@ -1,4 +1,4 @@
-// Listas de produtos
+
 // #################### HAMBURGUERES ######################### // 
 const hamburgueres = [
     {
@@ -146,7 +146,7 @@ const bebidas = [
 // Função para carregar os produtos no slider
 function carregarProdutos(lista, containerId) {
     const container = document.getElementById(containerId);
-    container.innerHTML = ""; // Limpa o conteúdo antes de adicionar novos itens
+    container.innerHTML = ""; 
 
     lista.forEach(produto => {
         const card = document.createElement("div");
@@ -174,7 +174,6 @@ function carregarProdutos(lista, containerId) {
     });
 }
 
-// Variável para controlar o índice do slider
 let indiceSlider = 0;
 let indiceSliderduplos = 0;
 let indiceSliderbebidas = 0;
@@ -185,28 +184,28 @@ function moverSlider(direcao) {
     const slider = document.getElementById("menu-hamburgueres");
     const totalProdutos = slider.children.length;
 
-    // Ajusta o índice de acordo com a direção
+
     indiceSlider += direcao;
 
-    // Garante que a navegação seja cíclica (volta para o primeiro grupo quando chega no final)
+    
     if (indiceSlider < 0) {
-        indiceSlider = totalProdutos - produtosPorPagina; // Volta para o último grupo de 4 itens
+        indiceSlider = totalProdutos - produtosPorPagina; 
     } else if (indiceSlider + produtosPorPagina > totalProdutos) {
-        indiceSlider = 0; // Vai para o primeiro grupo de 4 itens
+        indiceSlider = 0; 
     }
 
     // Ajusta a posição do slider com base no índice
-    slider.style.transform = `translateX(-${indiceSlider * 270}px)`; // 270px = largura do card + margem (ajuste conforme necessário)
+    slider.style.transform = `translateX(-${indiceSlider * 270}px)`; 
 }
 
 function moverSliderDuplos(direcaoduplos) {
     const sliderduplos = document.getElementById("menu-duplos");
     const totalProdutos = sliderduplos.children.length;
 
-    // Ajusta o índice de acordo com a direção
+   
     indiceSliderduplos += direcaoduplos;
 
-    // Garante que a navegação seja cíclica (volta para o primeiro grupo quando chega no final)
+    
     if (indiceSliderduplos < 0) {
         indiceSliderduplos = totalProdutos - produtosPorPagina; // Volta para o último grupo de 4 itens
     } else if (indiceSliderduplos + produtosPorPagina > totalProdutos) {
@@ -265,35 +264,72 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/* ############################### POPUP ################################# */
 
-// ##################### POPUP ######################## // 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("popup").style.display = "block";
+    const popup = document.getElementById("popup");
+
+    
+    function abrirPopup(event) {
+        event.preventDefault(); 
+
+        
+        const posX = event.pageX; 
+        const posY = event.pageY; 
+
+        
+        popup.style.display = "block";
+
+        
+        popup.style.left = `${posX - popup.offsetWidth / 2}px`; 
+        popup.style.top = `${posY - popup.offsetHeight / 2}px`;  
+
+        
+        const maxLeft = window.innerWidth - popup.offsetWidth;
+        const maxTop = window.innerHeight - popup.offsetHeight;
+
+        
+        if (parseInt(popup.style.left) < 0) popup.style.left = "0px";
+        if (parseInt(popup.style.top) < 0) popup.style.top = "0px";
+        if (parseInt(popup.style.left) > maxLeft) popup.style.left = `${maxLeft}px`;
+        if (parseInt(popup.style.top) > maxTop) popup.style.top = `${maxTop}px`;
+
+        
+        document.body.classList.add('popup-aberto');
+        document.documentElement.classList.add('popup-aberto');
+    }
+
+    
+    const botaoPopup = document.querySelector(".abrir-popup");
+    if (botaoPopup) {
+        botaoPopup.addEventListener("click", abrirPopup);
+    }
+
+    
+    function fecharPopup() {
+        const popup = document.getElementById('popup');
+        if (popup) {
+            
+            popup.style.display = 'none';
+
+           
+            document.body.classList.remove('popup-aberto');
+            document.documentElement.classList.remove('popup-aberto');
+        }
+    }
+
+    
+    const botaoFechar = document.querySelector(".fechar");
+    if (botaoFechar) {
+        botaoFechar.addEventListener("click", fecharPopup);
+    }
 });
 
-// Bloquear a rolagem ao carregar a página
-window.onload = function() {
-    document.body.classList.add('popup-aberto');
-    document.documentElement.classList.add('popup-aberto');
-  }
-  
-  function abrirPopup() {
-    // Exibe o popup
-    document.getElementById('popup').style.display = 'block';
-    
-    // Bloqueia a rolagem da página adicionando a classe 'popup-aberto' ao body e html
-    document.body.classList.add('popup-aberto');
-    document.documentElement.classList.add('popup-aberto');
-  }
-  
-  function fecharPopup() {
-    // Oculta o popup
-    document.getElementById('popup').style.display = 'none';
-    
-    // Libera a rolagem da página removendo a classe 'popup-aberto'
-    document.body.classList.remove('popup-aberto');
-    document.documentElement.classList.remove('popup-aberto');
-  }
+
+
+
+
+
 
 
 // ################## SLIDER ########################### // 
@@ -302,7 +338,7 @@ let indiceSlide = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
     mostrarSlide(indiceSlide);
-    setInterval(() => mudarSlide(1), 10000); // Troca de slide a cada 10 segundos
+    setInterval(() => mudarSlide(1), 10000); 
 });
 
 function mudarSlide(n) {
@@ -322,13 +358,13 @@ function mudarSlide(n) {
     setTimeout(() => {
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.opacity = "0";
-            slides[i].style.position = "absolute"; // Garante que todos fiquem sobrepostos
+            slides[i].style.position = "absolute"; 
             slides[i].classList.remove("fade-in", "fade-out");
         }
         slides[indiceSlide].style.opacity = "1";
-        slides[indiceSlide].style.position = "relative"; // Apenas o slide atual fica visível
+        slides[indiceSlide].style.position = "relative"; 
         slides[indiceSlide].classList.add("fade-in");
-    }, 500); // Tempo da animação (0.5s)
+    }, 500); 
 }
 
 function mostrarSlide(n) {
