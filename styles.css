@@ -1007,27 +1007,10 @@ html.popup-aberto {
         height: auto;
     }
 
-    .logo {
+    .logo,
+    .card-icons {
         width: 100%;
         justify-content: space-between;
-    }
-    .card-icons {
-        display: flex;
-        justify-content: center; /* Centraliza os itens horizontalmente */
-        align-items: center;     /* Alinha os itens verticalmente */
-        gap: 1rem;               /* Adiciona um espaçamento entre os ícones */
-        width: 100%;
-    }
-
-    .icone-btn {
-        display: inline-flex;     /* Garante que o botão se comporte como um item de linha */
-        justify-content: center;  /* Alinha o conteúdo dentro do botão */
-        align-items: center;      /* Alinha o conteúdo verticalmente dentro do botão */
-        padding: 10px;
-    }
-
-    .icone-btn i {
-        font-size: 24px; /* Ajusta o tamanho do ícone */
     }
 
     .menu-icon {
@@ -1332,6 +1315,26 @@ html.popup-aberto {
     .icone-btn img {
         width: 24px;
     }
+
+    .card-icons {
+        display: flex;
+        justify-content: center; /* Centraliza os itens horizontalmente */
+        align-items: center;     /* Alinha os itens verticalmente */
+        gap: 1rem;               /* Adiciona um espaçamento entre os ícones */
+        width: 100%;
+    }
+    
+    .icone-btn {
+        display: inline-flex;     /* Garante que o botão se comporte como um item de linha */
+        justify-content: center;  /* Alinha o conteúdo dentro do botão */
+        align-items: center;      /* Alinha o conteúdo verticalmente dentro do botão */
+        padding: 10px;
+    }
+    
+    .icone-btn i {
+        font-size: 24px; /* Ajusta o tamanho do ícone */
+    }
+ 
 
     .abrir-popup, 
     .comprar-agora {
